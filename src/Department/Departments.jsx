@@ -20,7 +20,7 @@ const Example = () => {
     AOS.init({
       duration: 1000, // duration of the animation
       easing: 'ease-in-out', // easing of the animation
-      once: true, // animation occurs only once
+      once: false, // animation occurs only once
     });
   }, []);
 

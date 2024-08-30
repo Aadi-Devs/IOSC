@@ -62,7 +62,7 @@ const Home = () => {
           }}
         />
 
-        <div className="relative z-[2] bg-transparent h-[5.5rem]">
+        <div className="relative  bg-transparent h-[5.5rem]">
           <header className="flex items-center justify-center bg-opacity-5 text-white hidden md:block">
             <div className="container mx-auto flex items-center h-20">
               <a href="" className="flex items-center justify-center">
@@ -70,22 +70,22 @@ const Home = () => {
               </a>
               <nav className="contents font-semibold text-base lg:text-lg">
                 <ul className="mx-auto flex items-center">
-                  <li className="p-5 xl:p-8 active hover:text-blue-200">
+                  <li className="p-5 xl:p-8 active hover:text-blue-600">
                     <a href="">
                       <span>Home</span>
                     </a>
                   </li>
-                  <Link className="p-5 xl:p-8 hover:text-blue-200" to="/team">
+                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
                     <span>Team</span>
                   </Link>
                   <Link
-                    className="p-5 xl:p-8 hover:text-blue-200"
+                    className="p-5 xl:p-8 hover:text-blue-600"
                     onClick={() => scrollToElement("Departments", 1500)}
                   >
                     <span>Departments</span>
                   </Link>
                   <Link
-                    className="p-5 xl:p-8 hover:text-blue-200"
+                    className="p-5 xl:p-8 hover:text-blue-600"
                     onClick={() => scrollToElement("Events", 1000)}
                   >
                     <span>Events</span>

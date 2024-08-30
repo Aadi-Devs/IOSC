@@ -10,7 +10,9 @@ import {
 import { FiArrowUpRight, FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 import { useLocation } from "react-router-dom";
-import Sky from "../../Assets/Sky.jpg";
+// import Sky from "../../Assets/Sky.jpg";
+import IOSC from "../../Assets/IOSC.jpg";
+import iosc1 from "../../Assets/iosc1.jpg";
 import Project1 from "../../Assets/Project-1.png";
 import Project2 from "../../Assets/Project-2.png";
 import Project3 from "../../Assets/Project-3.png";
@@ -19,7 +21,7 @@ import Project4 from "../../Assets/Project-4.png";
 // import { SiSpacex } from "react-icons/si";
 
 const WebD = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     // Scroll to the top whenever the component mounts
@@ -68,10 +70,12 @@ const Nav = () => {
     <nav className="fixed w-screen  right-[1px] top-0 z-50 flex items-center justify-between px-6 py-3 text-white">
       {/* <SiSpacex className="text-3xl mix-blend-difference" /> */}
       <div className="flex justify-center w-full ml-[6rem]">
-        <a href="" className=" text-2xl text-zinc-400 hover:text-white">IOSC-WEBD</a>
+        <a href="" className=" text-2xl text-zinc-400 hover:text-white">
+          IOSC-WEBD
+        </a>
       </div>
       <button
-        onClick={() => { 
+        onClick={() => {
           document.getElementById("Projects")?.scrollIntoView({
             behavior: "smooth",
           });
@@ -127,7 +131,7 @@ const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage: `url(${Sky})`,
+        backgroundImage: `url(${iosc1})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -194,8 +198,6 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
     />
   );
 };
-
-
 
 // Footer Links Start
 
@@ -264,9 +266,6 @@ const FlipLink = ({ children, href }) => {
 };
 
 // Footer Links End
-
-
-
 
 // Project Starts
 
@@ -417,8 +416,6 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 
 // Project Ends
 
-
-
 // TEXTPARALLAX STARTS
 
 const TextParallaxContentExample = () => {
@@ -449,10 +446,6 @@ const TextParallaxContentExample = () => {
   );
 };
 
-
-
-
-
 // Image Heading Starts
 
 const IMG_PADDING = 12;
@@ -475,9 +468,6 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
 };
 
 // Image Heading Ends
-
-
-
 
 // Images Function Starts
 
@@ -516,9 +506,6 @@ const StickyImage = ({ imgUrl }) => {
 
 // Images Function Ends
 
-
-
-
 const OverlayCopy = ({ subheading, heading }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -545,10 +532,6 @@ const OverlayCopy = ({ subheading, heading }) => {
     </motion.div>
   );
 };
-
-
-
-
 
 // Content Starts
 
@@ -608,7 +591,6 @@ const ExampleContent3 = () => (
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         reiciendis blanditiis aliquam aut fugit sint.
       </p>
-  
     </div>
   </div>
 );
