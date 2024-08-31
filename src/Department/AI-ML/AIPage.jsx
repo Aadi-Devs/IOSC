@@ -35,39 +35,13 @@ const Nav = () => {
 
       {/* Animated arrow at the bottom */}
       <div className="flex flex-col items-center">
-      <div
-        onClick={() => {
-          document.getElementById("AiProjects")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-        className="absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
-      >
-          <svg
-            className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-      </div>
-      <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
-      </div>
-      {/* <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
               behavior: "smooth",
             });
           }}
-          className="absolute  flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
+          className="absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
         >
           <svg
             className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
@@ -84,7 +58,8 @@ const Nav = () => {
             />
           </svg>
         </div>
-      </div> */}
+        <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
+      </div>
     </div>
   );
 };
@@ -192,13 +167,13 @@ const Projects = () => {
 
 const BouncyCardsFeatures = () => {
   return (
-    <section className="mx-auto z-[1] w-full h-full px-4 py-6 text-slate-800">
+    <section className="mx-auto  w-full h-full px-4 py-6 text-slate-800">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-lg font-bold md:text-4xl text-slate-400">
           Our Projects
         </h2>
       </div>
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4 overflow-y-hidden overflow-x-hidden">
+      <div className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4">
         <BounceCardLeft className="col-span-12 md:col-span-4">
           <CardTitle>Project-1</CardTitle>
         </BounceCardLeft>
@@ -206,7 +181,7 @@ const BouncyCardsFeatures = () => {
           <CardTitle>Project-2</CardTitle>
         </BounceCardRight>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 overflow-y-hidden overflow-x-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <BounceCardLeft className="col-span-12 md:col-span-8">
           <CardTitle>Project-3</CardTitle>
         </BounceCardLeft>
@@ -222,6 +197,7 @@ const BounceCardLeft = ({ className, children }) => {
   return (
     <motion.div
       whileHover={{ scale: 0.8, rotate: "-10deg" }}
+      whileTap={{ scale: 0.9 }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}
@@ -233,6 +209,7 @@ const BounceCardRight = ({ className, children }) => {
   return (
     <motion.div
       whileHover={{ scale: 0.8, rotate: "10deg" }}
+      whileTap={{ scale: 0.9 }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}
