@@ -26,24 +26,51 @@ const Nav = () => {
   return (
     <div
       id="AiNav"
-      className="bg-transparent bg-fixed w-full z-[1] h-screen py-3"
+      className="bg-transparent bg-fixed w-full z-[1] h-screen"
       style={{
         backgroundColor: "pink",
       }}
     >
       <SlideTabs />
+
       {/* Animated arrow at the bottom */}
-      <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]">
+      <div className="flex flex-col items-center">
+      <div
+        onClick={() => {
+          document.getElementById("AiProjects")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+        className="absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
+      >
+          <svg
+            className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+      </div>
+      <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
+      </div>
+      {/* <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
               behavior: "smooth",
             });
           }}
-          className="absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
+          className="absolute  flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
         >
           <svg
-            className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer"
+            className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -57,7 +84,7 @@ const Nav = () => {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -143,15 +170,6 @@ const Cursor = ({ position }) => {
 
 // NavBar Ends-------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
 // Projects Starts----------------------------------------------------------------------------------------------------------------
 
 const Projects = () => {
@@ -180,19 +198,19 @@ const BouncyCardsFeatures = () => {
           Our Projects
         </h2>
       </div>
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4 overflow-y-hidden overflow-x-hidden">
         <BounceCardLeft className="col-span-12 md:col-span-4">
           <CardTitle>Project-1</CardTitle>
         </BounceCardLeft>
-        <BounceCardRight className="col-span-12 md:col-span-8">
+        <BounceCardRight className="col-span-12 md:col-span-8 overflow-x-hidden">
           <CardTitle>Project-2</CardTitle>
         </BounceCardRight>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 overflow-y-hidden overflow-x-hidden">
         <BounceCardLeft className="col-span-12 md:col-span-8">
           <CardTitle>Project-3</CardTitle>
         </BounceCardLeft>
-        <BounceCardRight className="col-span-12 md:col-span-4">
+        <BounceCardRight className="col-span-12 md:col-span-4 overflow-x-hidden">
           <CardTitle>Project-4</CardTitle>
         </BounceCardRight>
       </div>
@@ -203,7 +221,7 @@ const BouncyCardsFeatures = () => {
 const BounceCardLeft = ({ className, children }) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.95, rotate: "-10deg" }}
+      whileHover={{ scale: 0.8, rotate: "-10deg" }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}
@@ -211,11 +229,10 @@ const BounceCardLeft = ({ className, children }) => {
   );
 };
 
-
 const BounceCardRight = ({ className, children }) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.95, rotate: "10deg" }}
+      whileHover={{ scale: 0.8, rotate: "10deg" }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}
@@ -233,14 +250,6 @@ const CardTitle = ({ children }) => {
 
 // Projects Ends--------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
 // About Starts---------------------------------------------------------------------------------------------------------------------------
 
 const About = () => {
@@ -255,9 +264,3 @@ const About = () => {
 };
 
 // About Ends-----------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
