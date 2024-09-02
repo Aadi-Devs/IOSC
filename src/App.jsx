@@ -8,6 +8,7 @@ import Cards from "./Home/Card/Cards.jsx";
 import MovingText from "./Home/Moving Text/MovingText.jsx";
 import Departments from "./Department/Departments.jsx";
 import Companies from "./Home/Companies/Companies.jsx";
+import OpenCard from "./Home/OpenCards/OpenCard.jsx";
 // import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -26,6 +27,7 @@ const App = () => {
       <Departments />
       <Companies />
       {/* <SlidingMenu /> */}
+      <OpenCard/>
       <MovingText />
 
       <footer id="Footer" className="relative h-[20rem] w-[94.55rem] pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500">
