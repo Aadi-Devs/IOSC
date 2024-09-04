@@ -34,7 +34,7 @@ const Nav = () => {
       <SlideTabs />
 
       {/* Animated arrow at the bottom */}
-      <div className="flex flex-col items-center">
+      <div className="absolute bottom-[1px] h-[40px] w-full flex flex-col items-center">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
@@ -72,39 +72,47 @@ const SlideTabs = () => {
   });
 
   return (
-    <ul
-      onMouseLeave={() => {
-        setPosition((pv) => ({
-          ...pv,
-          opacity: 0,
-        }));
-      }}
-      className="w-full max-w-[40rem] mx-auto flex flex-wrap justify-center rounded-full border-[3px] border-[#000029] bg-transparent p-1"
-    >
-      <Tab setPosition={setPosition}>Home</Tab>
-      <div
-        onClick={() => {
-          document.getElementById("AiProjects")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-      >
-        <Tab setPosition={setPosition}>Projects</Tab>
-      </div>
-      <div
-        onClick={() => {
-          document.getElementById("AiAbout")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-      >
-        <Tab setPosition={setPosition}>About</Tab>
-      </div>
-      <Tab setPosition={setPosition}>Docs</Tab>
-      <Tab setPosition={setPosition}>Blog</Tab>
+    <>
+      <div className="w-full h-[5rem] flex flex-col justify-center items-center">
+        <ul
+          onMouseLeave={() => {
+            setPosition((pv) => ({
+              ...pv,
+              opacity: 0,
+            }));
+          }}
+          className="absolute top-[0.1px]  w-max-[40rem] mx-auto flex flex-wrap justify-center items-center rounded-full border-[3px] border-[#000029] bg-transparent p-1"
+        >
+          <Tab setPosition={setPosition}>Home</Tab>
+          <div
+            onClick={() => {
+              document.getElementById("AiProjects")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <Tab setPosition={setPosition}>Projects</Tab>
+          </div>
+          <div
+            onClick={() => {
+              document.getElementById("AiAbout")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <Tab setPosition={setPosition}>About</Tab>
+          </div>
+          <Tab setPosition={setPosition}>Docs</Tab>
+          <Tab setPosition={setPosition}>Blog</Tab>
 
-      <Cursor position={position} />
-    </ul>
+          <Cursor position={position} />
+        <div>
+          <i className="fas fa-bars"></i>
+          <i className="fas fa-times"></i>
+        </div>
+        </ul>
+      </div>
+    </>
   );
 };
 

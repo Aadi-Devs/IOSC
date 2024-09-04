@@ -7,12 +7,12 @@ import {
 } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
+import "./Departments.css";
 import AIML from "../Assets/AI-ML.jpg";
 import WebD from "../Assets/Web.jpg";
 import IOT from "../Assets/IOT.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import IronMan from "../Assets/iron-man.svg" 
 
 const Example = () => {
 
@@ -26,22 +26,11 @@ const Example = () => {
 
 
   return (
-    <div id="Departments" className="grid h-[45rem] w-[94.55rem]  gap-4 place-content-center bg-[#000029]  px-4  text-slate-900">
-      <div className="text-6xl h-[10rem] text-white text-center" data-aos="fade-up">
+    <div id="Departments" className="grid h-full w-full  gap-4 place-content-center bg-[#000029] py-20  px-4  text-slate-900">
+      <div className="department-heading text-6xl h-[10rem] text-white text-center" data-aos="fade-up">
         <h1>Our Departments</h1>
       </div>
-      {/* <div className="flex gap-[10rem]"  data-aos="fade-up">
-        <div className="flex flex-col justify-center">
-          <TiltCard imageSrc={AIML} route="/AI/ML" />
-        </div>
-        <div className="flex flex-col justify-center">
-          <TiltCard imageSrc={WebD} route="/WebD" />
-        </div>
-        <div className="flex flex-col justify-center">
-          <TiltCard imageSrc={IOT} route="/IOT" />
-        </div>
-      </div> */}
-      <div className="flex gap-[10rem]">
+      <div className="department-wrapper flex w-full gap-[10rem]">
         <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="0">
           <TiltCard imageSrc={AIML} route="/AI/ML" />
         </div>
@@ -52,7 +41,6 @@ const Example = () => {
           <TiltCard imageSrc={IOT} route="/IOT" />
         </div>
       </div>
-
     </div>
   );
 };
@@ -105,12 +93,13 @@ const TiltCard = ({ imageSrc, route }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
+      whileTap={{scale: 0.9}}
       style={{
         transformStyle: "preserve-3d",
         transform,
         cursor: "pointer",
       }}
-      className="relative h-96 w-72 rounded-xl bg-blue-200 to-violet-300"
+      className="hover-card relative h-96 w-72 rounded-xl bg-blue-200 to-violet-300"
     >
       <div
         style={{
@@ -122,7 +111,7 @@ const TiltCard = ({ imageSrc, route }) => {
         <img
           src={imageSrc}
           alt=""
-          className="absolute h-[22rem] grid place-content-center rounded-xl bg-white shadow-lg"
+          className="hover-image absolute h-[22rem] grid place-content-center rounded-xl bg-white shadow-lg"
         />
       </div>
     </motion.div>

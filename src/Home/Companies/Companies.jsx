@@ -40,39 +40,38 @@ const Companies = () => {
 
   return (
     <>
-    <div className="flex items-center justify-center h-[40rem] w-[94.55rem]  bg-[#000029] pb-[5rem]">
+    <div className="flex items-center justify-center h-[40rem] w-full  bg-[#000029] pb-[5rem]">
       <AppContainer className={AppContainer}>
         <Wrapper className={Wrapper}>
           <Text className={Text}>Our Partners</Text>
-          {/* <Note className={Note}>Our customers have gotten offers from awesome companies.</Note> */}
-          <Marquee data-aos="fade-up">
-            <MarqueeGroup>
+          <Marquee  className="company-container" data-aos="fade-up">
+            <MarqueeGroup className="image-container">
               {row1.map((el) => (
-                <ImageGroup>
-                  <Image src={el} />
+                <ImageGroup className="image">
+                  <Image  src={el} />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
-            <MarqueeGroup>
+            <MarqueeGroup className="image-container">
               {row1.map((el) => (
-                <ImageGroup>
-                  <Image src={el} />
+                <ImageGroup className="image">
+                  <Image  src={el} />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
           </Marquee>
-          <Marquee data-aos="fade-up">
-            <MarqueeGroup2>
+          <Marquee className="company-container" data-aos="fade-up">
+            <MarqueeGroup2 className="image-container">
               {row2.map((el) => (
-                <ImageGroup>
-                  <Image src={el} />
+                <ImageGroup className="image">
+                  <Image  src={el} />
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
-            <MarqueeGroup2>
+            <MarqueeGroup2 className="image-container">
               {row2.map((el) => (
-                <ImageGroup>
-                  <Image src={el} />
+                <ImageGroup className="image">
+                  <Image  src={el} />
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
@@ -87,44 +86,13 @@ const Companies = () => {
 export default Companies;
 
 
-// const AppContainer = styled.div`
-//   width: full;
-//   height: 25rem;
-//   color: #000000;
 
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
 
-// const Wrapper = styled.div`
-//   width: 100%;
-//   height: fit-content;
 
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-// `;
-
-// const Text = styled.div`
-//   font-size: 50px;
-//   font-weight: 400;
-//   margin-bottom: 5rem;
-//   color: white;
-// `;
-
-// const Note = styled.div`
-//   font-size: 18px;
-//   font-weight: 200;
-//   margin-bottom: 40px;
-//   color: white;
-// `;
 
 const Marquee = styled.div`
   display: flex;
-  width: 1200px;
+  // width: 1200px;  
   overflow: hidden;
   user-select: none;
 

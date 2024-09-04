@@ -1,0 +1,69 @@
+/* Responsive */
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .department-wrapper {
+    gap: 6.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .department-wrapper {
+    gap: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  .department-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hover-card {
+    height: 22rem;
+    width: 18rem;
+  }
+
+  .hover-image {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .department-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hover-card {
+    height: 22rem;
+    width: 18rem;
+  }
+
+  .hover-image {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .department-heading{
+        font-size: 3rem;
+    }
+
+
+
+  .hover-card {
+    height: 18rem;
+    width: 15rem;
+  }
+
+  .hover-image {
+    height: 16rem;
+  }
+
+  .department-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

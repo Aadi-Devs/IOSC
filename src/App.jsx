@@ -4,7 +4,6 @@ import twitter from "./Assets/icons8-twitter-48.png";
 import instagram from "./Assets/instagram.png";
 import Home from "./Home/Home.jsx";
 import Cards from "./Home/Card/Cards.jsx";
-// import SlidingMenu from "./Home/Sliding Menu/SlidingMenu.jsx";
 import MovingText from "./Home/Moving Text/MovingText.jsx";
 import Departments from "./Department/Departments.jsx";
 import Companies from "./Home/Companies/Companies.jsx";
@@ -25,10 +24,9 @@ const App = () => {
       <Cards />
       <Departments />
       <Companies />
-      {/* <SlidingMenu /> */}
       <MovingText />
 
-      <footer id="Footer" className="relative h-[20rem] w-[94.55rem] pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500">
+      <footer id="Footer" className="relative h-[20rem] w-full pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500">
         <div className="container mx-auto px-4" data-aos="fade-up">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
@@ -66,13 +64,17 @@ const App = () => {
                   className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-dribbble"></i>
+                  <a href="">
+                    <img src="" alt="" />
+                  </a>
                 </button>
                 <button
                   className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-github"></i>
+                  <a href="">
+                    <img src="" alt="" />
+                  </a>
                 </button>
               </div>
             </div>

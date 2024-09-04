@@ -18,7 +18,7 @@ const MovingText = () => {
     const className = "MovingText";
     return (
         <>
-            <div className={className + " w-[94.55rem] bg-white cursor-pointer"} data-aos="fade-up">
+            <div className={className + " w-full bg-white cursor-pointer"} data-aos="fade-up">
                 <div className="w-full flex flex-col items-center justify-center">
                     <div className={className + "__container w-full py-2 pb-4 overflow-hidden border-blue-900 border-t-4 border-b-4"}>
                         <div className={className + "__movingTexts"}>

@@ -1,127 +1,188 @@
-/* .flip-card{
-    perspective: 1000px;
+.flip-card {
+  perspective: 1000px;
 }
 
-.flip-card-inner{
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
-.flip-card-back{
-    position: absolute;
-    backface-visibility: hidden;
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 2xl;
 }
 
-.flip-card-back{
-    transform: rotateY(180deg);
-} */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+
+/* Responsive */
 
 
 
 
-/* Cards.css */
-/* .card-container {
-    perspective: 1000px;
-    width: 300px;
-    height: 400px;
-  }
+/* @media screen and (min-width: 1200px) and (max-width:1440px) {
   
-  .card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
+
+  .event-wrapper{
+    /* margin: 4rem 4rem; */
+    /* gap: 400rem;/ */
+  /* }  */
+/* } */
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+  /* .event-container{
+    /* height: 5rem; */
+  /* } */ */
+
+  .card{
+    height: 25rem;
+    width: 20rem;
   }
-  
-  .flipped {
-    transform: rotateY(180deg);
+  .card:hover{
+    transform: scale(1.08);
   }
-  
-  .card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  .flip-card-event-heading{
+    font-size: 2.3rem;
   }
-  
-  .card-front {
-    background-color: #ffcc00;
+  .flip-card-event-info{
+    font-size: 1.2rem;
   }
-  
-  .card-back {
-    background-color: #0066ff;
-    transform: rotateY(180deg);
+}
+
+
+
+@media screen and (min-width: 800px) and (max-width:850px){
+  .event-wrapper{
+    margin: 4rem 1.3rem;
+    gap: 4rem;
+  } 
+
+  .flip-card-event-info-container{
+    gap: 3rem;
+  } 
+
+  .card{
+    height: 22rem;
+    width: 17rem;
   }
-   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   .flip-card {
-    perspective: 1000px;
+  .card:hover{
+    transform: scale(1.08);
   }
-  
-  .flip-card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    width: 100%;
-    height: 100%;
+
+  .flip-card-event-heading{
+    font-size: 2rem;
   }
-  
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+  .flip-card-event-info{
+    font-size: 1rem;
   }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 2xl;
+
+}
+
+
+
+
+
+@media screen and (min-width: 600px) and (max-width:768px) {
+
+  .event-wrapper{
+    margin: 4rem 1.3rem;
+    gap: 4rem;
+  } 
+
+  .flip-card-event-info-container{
+    gap: 3rem;
+  } 
+
+  .card{
+    height: 22rem;
+    width: 17rem;
   }
-  
-  .flip-card-back {
-    transform: rotateY(180deg);
+  .card:hover{
+    transform: scale(1.08);
   }
-  
+
+  .flip-card-event-heading{
+    font-size: 1.8rem;
+  }
+  .flip-card-event-info{
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+  .event-container{
+    gap: 6rem;
+
+  }
+
+
+  #Events{
+    gap: 10rem;
+  }
+
+  .card{
+    height: 22rem;
+    width: 18rem;
+  }
+
+  .card:hover{
+    transform: scale(1.05);
+  }
+
+  .event-wrapper{
+    flex-direction: column;
+    height: 43rem;
+    /* width: 15rem; */
+
+    margin: auto;
+    gap: 2rem;
+  } 
+
+
+  .flip-card-event-info-container{
+    gap: 2rem;
+    width: 15rem;
+  } 
+
+
+  .flip-card-event-heading{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .flip-card-event-info{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .card{
+    height: 20rem;
+    width: 17rem;
+  }
+
+  .event-wrapper2{
+    flex-direction: column-reverse;
+  }
+}
