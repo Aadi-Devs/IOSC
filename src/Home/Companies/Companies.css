@@ -1,6 +1,6 @@
 .AppContainer {
   width: 100vh;
-  height: 25rem;
+  height: 40rem;
   color: #000000;
 
   position: relative;
@@ -35,27 +35,63 @@
 
 /* Responsive  */
 
-@media screen and (min-width: 1201px) and (max-width: 1440px) {
-  .company-container {
-    width: 1200px;
+
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  /* .company-container {
+    width: 70rem;
+  } */
+
+  .AppContainer {
+    overflow-x: hidden;
+    height: 41rem;
+    width: 70rem;
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
   }
+
+
+
+
 }
+
+
+
+
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .company-container {
+  /* .company-container {
     width: 60rem;
-  }
+  } */
 }
+
+
+
+
+
 
 @media screen and (min-width: 800px) and (max-width: 850px) {
-  .company-container {
+  /* .company-container {
     width: 70rem;
+  } */
+
+  .Wrapper{
+    margin-top: 12rem;
   }
 
+  
 
   .AppContainer {
-    width: screen;
     overflow-x: hidden;
+    height: 41rem;
+    width: 48rem;
     mask-image: linear-gradient(
       to right,
       hsl(0 0% 0% / 0),
@@ -64,44 +100,38 @@
       hsl(0 0% 0% / 0)
     );
   }
+
+
+  .Text {
+    padding-top: 7rem;
+    position: absolute;
+    top: 0.1px;
+    font-size: 4rem;
+    text-align: center;
+  }
 }
+
+
+
+
+
+
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
-  .company-container {
-    width: 45rem;
+  /* .company-container {
+    width: 70rem;
+  } */
+
+
+  .Wrapper{
+    margin-top: 8rem;
   }
 
-  /* .image{
-        width: 20rem;
-    } */
-}
-
-@media screen and (min-width: 600px) and (max-width: 640px) {
-  .company-container {
-    width: 33rem;
-  }
-
-  .image-container {
-    margin-right: 4.5rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .company-container {
-    width: 50rem;
-    overflow-x: hidden;
-  }
-
-  .Wrapper {
-    overflow-x: hidden;
-    width: screen;
-    /* height:50rem; */
-  }
+  
 
   .AppContainer {
-    height: screen;
-    width: screen;
     overflow-x: hidden;
+    height: 35rem;
     mask-image: linear-gradient(
       to right,
       hsl(0 0% 0% / 0),
@@ -111,8 +141,65 @@
     );
   }
 
-  .Text{
+
+  .Text {
+    padding-top: 5rem;
+    position: absolute;
+    top: 0.1px;
     font-size: 3.5rem;
     text-align: center;
   }
+}
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 640px) {
+  /* .company-container {
+    width: 50rem;
+  } */
+
+  /* .image-container {
+    margin-right: 4.5rem;
+  } */
+
+  .AppContainer {
+    /* height: screen; */
+    /* width: screen; */
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  .AppContainer {
+    height: 40rem;
+    width: 25rem;
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+  }
+
 }

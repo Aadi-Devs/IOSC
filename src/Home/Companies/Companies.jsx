@@ -40,7 +40,7 @@ const Companies = () => {
 
   return (
     <>
-    <div className="flex items-center justify-center h-[40rem] w-full  bg-[#000029] pb-[5rem]">
+    <div className="flex items-center justify-center w-full bg-[#000029] pb-[5rem]">
       <AppContainer className={AppContainer}>
         <Wrapper className={Wrapper}>
           <Text className={Text}>Our Partners</Text>
@@ -92,7 +92,7 @@ export default Companies;
 
 const Marquee = styled.div`
   display: flex;
-  // width: 1200px;  
+  width: 1200px;  
   overflow: hidden;
   user-select: none;
 
