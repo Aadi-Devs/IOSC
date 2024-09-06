@@ -26,9 +26,9 @@ const App = () => {
       <Companies />
       <MovingText />
 
-      <footer id="Footer" className="relative h-[20rem] w-full pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500">
+      <footer id="Footer" className="relative h-full w-full pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500">
         <div className="container mx-auto px-4" data-aos="fade-up">
-          <div className="flex flex-wrap text-left lg:text-left">
+          <div className="info-wrapper flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl fonat-semibold text-white">Contact Us</h4>
               <h5 className="text-lg mt-0 mb-2 text-white">
@@ -79,7 +79,7 @@ const App = () => {
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
+              <div className="links-container flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
                   <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Useful Links

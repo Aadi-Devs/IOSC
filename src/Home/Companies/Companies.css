@@ -33,6 +33,12 @@
   padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
 }
 
+
+
+
+
+
+
 /* Responsive  */
 
 
@@ -40,10 +46,7 @@
 
 
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
-  /* .company-container {
-    width: 70rem;
-  } */
-
+  
   .AppContainer {
     overflow-x: hidden;
     height: 41rem;
@@ -58,8 +61,6 @@
   }
 
 
-
-
 }
 
 
@@ -67,9 +68,19 @@
 
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
-  /* .company-container {
+ 
+  .AppContainer {
+    overflow-x: hidden;
+    height: 41rem;
     width: 60rem;
-  } */
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+}
 }
 
 
@@ -78,9 +89,6 @@
 
 
 @media screen and (min-width: 800px) and (max-width: 850px) {
-  /* .company-container {
-    width: 70rem;
-  } */
 
   .Wrapper{
     margin-top: 12rem;
@@ -165,7 +173,7 @@
 
   .AppContainer {
     /* height: screen; */
-    /* width: screen; */
+    width: 35rem;
     overflow-x: hidden;
     mask-image: linear-gradient(
       to right,
@@ -191,7 +199,7 @@
 
   .AppContainer {
     height: 40rem;
-    width: 25rem;
+    width: 23rem;
     overflow-x: hidden;
     mask-image: linear-gradient(
       to right,
