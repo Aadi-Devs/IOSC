@@ -48,7 +48,7 @@ const WebD = () => {
       </div>
 
       <div className="h-full w-full bg-zinc-950">
-        <section className="grid h-full w-[40rem] text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
+        <section className="grid h-full w-full text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
           <FlipLink href="#" className="w-[8rem]">
             Twitter
           </FlipLink>
@@ -67,7 +67,7 @@ export default WebD;
 
 const Nav = () => {
   return (
-    <nav className="fixed w-screen  right-[1px] top-0 z-50 flex items-center justify-between px-6 py-3 text-white">
+    <nav className="absolute fixed w-full   right-[1px] top-0 z-10 flex items-center justify-between px-6 py-3 text-white">
       {/* <SiSpacex className="text-3xl mix-blend-difference" /> */}
       <div className="flex justify-center w-full ml-[6rem]">
         <a href="" className=" text-2xl text-zinc-400 hover:text-white">
@@ -94,7 +94,7 @@ const Hero = () => {
   return (
     <div
       style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
-      className="relative w-full"
+      className="relative w-full "
     >
       <CenterImage />
 
@@ -126,7 +126,7 @@ const CenterImage = () => {
 
   return (
     <motion.div
-      className="sticky top-0 h-screen w-full"
+      className="sticky top-0 h-screen w-full "
       style={{
         clipPath,
         backgroundSize,
@@ -141,7 +141,7 @@ const CenterImage = () => {
 
 const ParallaxImages = () => {
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-[200px]">
+    <div className="mx-auto max-w-5xl px-4 pt-[200px] ">
       <ParallaxImg
         src={Project2}
         alt="And example of a space launch"
@@ -210,7 +210,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-2xl font-black uppercase sm:text-6xl md:text-7xl lg:text-8xl"
+      className="relative block  overflow-hidden whitespace-nowrap text-2xl font-black uppercase sm:text-6xl md:text-7xl lg:text-8xl"
       style={{
         lineHeight: 0.9,
       }}
@@ -343,7 +343,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+      className="group relative flex  items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
     >
       <div>
         <motion.span
@@ -458,7 +458,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-screen">
+      <div className="relative h-screen ">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
@@ -492,7 +492,7 @@ const StickyImage = ({ imgUrl }) => {
         scale,
       }}
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
+      className="sticky z-0 overflow-hidden  rounded-3xl"
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"
@@ -523,7 +523,7 @@ const OverlayCopy = ({ subheading, heading }) => {
         opacity,
       }}
       ref={targetRef}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white "
     >
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subheading}
@@ -536,7 +536,7 @@ const OverlayCopy = ({ subheading, heading }) => {
 // Content Starts
 
 const ExampleContent1 = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 ">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
       Additional content explaining the above card here
     </h2>
