@@ -204,8 +204,8 @@ const BouncyCardsFeatures = () => {
 const BounceCardLeft = ({ className, children }) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.8, rotate: "-10deg" }}
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 0.9, rotate: "-5deg" }}
+      whileTap={{ scale: 0.8 }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}
@@ -216,8 +216,8 @@ const BounceCardLeft = ({ className, children }) => {
 const BounceCardRight = ({ className, children }) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.8, rotate: "10deg" }}
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 0.9, rotate: "5deg" }}
+      whileTap={{ scale: 0.8 }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
     >
       {children}

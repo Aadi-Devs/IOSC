@@ -9,7 +9,7 @@
 
 
 
-/* Responsive Footer */
+/* Responsive Footer Starts */
 
 @media screen and (min-width:800px) and (max-width:850px) {
     .links-container{
@@ -67,3 +67,83 @@
         flex-wrap: nowrap;
     }
 }
+
+
+/* Responsive Footer Ends */
+
+
+
+
+
+
+
+
+
+/* Responsive Home Starts */
+
+
+
+
+
+/* Initial state, positioned off-screen */
+.slide-out {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  /* When the menu is open */
+  .slide-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Smooth transition */
+  .transition-transform {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+
+
+
+
+
+.navbar-smooth {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+
+.ham-burger{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+@media screen and (min-width:320px) and (max-width:468px) {
+    .ham-burger-button{
+        right: 18px;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:800px) {
+    .ham-burger-button{
+        right: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Home Ends */
