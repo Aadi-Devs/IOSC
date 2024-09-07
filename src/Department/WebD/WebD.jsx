@@ -67,23 +67,23 @@ export default WebD;
 
 const Nav = () => {
   return (
-    <nav className="absolute fixed w-full   right-[1px] top-0 z-10 flex items-center justify-between px-6 py-3 text-white">
+    <nav className=" fixed w-full top-0 z-10 flex items-center justify-between px-6 py-3 text-white">
       {/* <SiSpacex className="text-3xl mix-blend-difference" /> */}
-      <div className="flex justify-center w-full ml-[6rem]">
+      <div className="iosc-heading flex justify-center w-full items-center">
         <a href="" className=" text-2xl text-zinc-400 hover:text-white">
           IOSC-WEBD
         </a>
+        <button
+          onClick={() => {
+            document.getElementById("Projects")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="flex absolute right-[1rem] items-center gap-1 text-xs text-zinc-400 hover:text-blue-200"
+        >
+          Projects <FiArrowRight />
+        </button>
       </div>
-      <button
-        onClick={() => {
-          document.getElementById("Projects")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-        className="flex items-center gap-1 text-xs text-zinc-400 hover:text-blue-200"
-      >
-        Projects <FiArrowRight />
-      </button>
     </nav>
   );
 };
@@ -406,7 +406,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           },
         }}
         transition={{ type: "spring" }}
-        className="relative z-10 p-4"
+        className="relative z-10 p-4 absolute right-2"
       >
         <FiArrowRight className="text-5xl text-neutral-50" />
       </motion.div>
