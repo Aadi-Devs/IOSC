@@ -122,7 +122,7 @@ const Nav = () => {
       </div>
 
       {/* Animated arrow at the bottom */}
-      <div className="absolute bottom-[0.1px] h-[40px] w-full flex flex-col items-center">
+      <div className="absolute bottom-[0.1px] w-full flex flex-col items-center">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
