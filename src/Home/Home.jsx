@@ -70,13 +70,13 @@ const Home = () => {
         <div className="relative bg-opacity-40 backdrop-blur-md bg-transparent h-[5.5rem]">
           <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
             <div className="container mx-auto flex items-center h-20">
-              <a href="" className="flex items-center justify-center">
+              <a href="" className="soc-logo flex items-center justify-center">
                 <img src={Iosclogo} alt="Logo" className="h-14" />
               </a>
 
               {/* Hamburger Icon for small screens */}
               <button
-                className="ham-burger-button absolute right-12 custom:hidden flex items-center px-3 py-2 border rounded text-blue-400 border-blue-950 hover:text-blue-600 hover:border-blue-600"
+                className="ham-burger-button absolute right-5 custom:hidden flex items-center px-3 py-2 border rounded text-blue-400 border-blue-950 hover:text-blue-600 hover:border-blue-600"
                 onClick={handleToggle}
               >
                 <svg

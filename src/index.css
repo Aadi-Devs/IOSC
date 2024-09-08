@@ -128,14 +128,18 @@
 }
 
 
-@media screen and (min-width:768px) and (max-width:800px) {
-    .ham-burger-button{
-        right: 18px;
+@media screen and (min-width:600px) and (max-width:768px) {
+    .soc-logo{
+        position: absolute;
+        left: 10px;
     }
 }
-
-
-
+@media screen and (min-width:800px) and (max-width:850px) {
+    .soc-logo{
+        position: absolute;
+        left: 10px;
+    }
+}
 
 /* Responsive Home Ends */
 
