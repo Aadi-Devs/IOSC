@@ -141,6 +141,7 @@
     }
 }
 
+
 /* Responsive Home Ends */
 
 
@@ -152,6 +153,24 @@
 
 
 /* Responsive AI Starts */
+
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    .mobile-screen{
+        height: screen;
+    }
+
+    .ai-arrow-container{
+        position: absolute;
+        bottom: 0.1px;
+    }
+    .ai-arrow-line{
+        position: absolute;
+        bottom: 0.1px;
+    }
+}
+
+
 
 
 

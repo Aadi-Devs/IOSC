@@ -37,7 +37,7 @@ const Nav = () => {
   return (
     <div
       id="AiNav"
-      className="bg-transparent bg-fixed w-full z-[1] h-screen"
+      className="mobile-screen bg-transparent bg-fixed w-full z-[1] h-screen"
       style={{
         backgroundColor: "pink",
       }}
@@ -122,14 +122,14 @@ const Nav = () => {
       </div>
 
       {/* Animated arrow at the bottom */}
-      <div className="absolute bottom-[0.1px] h-[50px] w-full flex flex-col items-center">
+      <div className="h-[50px] w-full flex flex-col items-center justify-center">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
               behavior: "smooth",
             });
           }}
-          className="absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
+          className="ai-arrow-container absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
         >
           <svg
             className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
@@ -146,7 +146,7 @@ const Nav = () => {
             />
           </svg>
         </div>
-        <div className="absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
+        <div className="ai-arrow-line absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
       </div>
     </div>
   );
