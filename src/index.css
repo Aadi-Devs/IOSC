@@ -147,6 +147,50 @@
 
 
 
+/* Responsive AI Starts */
 
 
 
+/* General styles for the mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen to the right */
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    transition: right 0.4s ease-in-out; /* Smooth slide-in transition */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 999; /* Ensure it's on top */
+  }
+  
+  /* When the menu is open, slide it in from the right */
+  .mobile-menu.open {
+    right: 0; /* Menu slides in from the right */
+  }
+  
+  /* Close button for mobile menu */
+  .mobile-menu .close-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; /* Change the close button position */
+    cursor: pointer;
+  }
+  
+  
+/* Glass effect background for mobile menu */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.2); /* Glass effect background */
+    backdrop-filter: blur(10px); /* Apply blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Optional shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+  
+
+
+/* Responsive AI Ends */

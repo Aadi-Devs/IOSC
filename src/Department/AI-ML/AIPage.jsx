@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Sky from "../../Assets/Sky.jpg";
 import Night from "../../Assets/night.jpg";
+import "../../index.css";
 
 const AIPage = () => {
   // Scroll to the top when the component is mounted
@@ -23,6 +24,16 @@ export default AIPage;
 // NavBar Starts-------------------------------------------------------------------------------------------------------------------------
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Handle window resize to adjust for screen width
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       id="AiNav"
@@ -31,10 +42,87 @@ const Nav = () => {
         backgroundColor: "pink",
       }}
     >
-      <SlideTabs />
+      {windowWidth < 850 ? (
+        // Show hamburger icon for screens smaller than 850px
+        <div className="flex justify-between w-full items-center fixed p-4">
+          <div className="text-white">Logo</div>
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="absolute right-5 cursor-pointer text-white"
+          >
+            {/* Hamburger Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+        </div>
+      ) : (
+        <SlideTabs />
+      )}
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <div
+          onClick={() => setIsOpen(false)}
+          className="self-end p-4 cursor-pointer"
+        >
+          {/* Close Icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <ul className="flex flex-col items-center space-y-4">
+          <li
+            className="cursor-pointer text-lg"
+            onClick={() => {
+              setIsOpen(false);
+              document.getElementById("AiProjects")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Projects
+          </li>
+          <li
+            className="cursor-pointer text-lg"
+            onClick={() => {
+              setIsOpen(false);
+              document.getElementById("AiAbout")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            About
+          </li>
+          <li className="cursor-pointer text-lg">Docs</li>
+          <li className="cursor-pointer text-lg">Blog</li>
+        </ul>
+      </div>
 
       {/* Animated arrow at the bottom */}
-      <div className="absolute bottom-[1px] h-[40px] w-full flex flex-col items-center">
+      <div className="absolute bottom-[0.1px] h-[40px] w-full flex flex-col items-center">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
@@ -106,10 +194,6 @@ const SlideTabs = () => {
           <Tab setPosition={setPosition}>Blog</Tab>
 
           <Cursor position={position} />
-        <div>
-          <i className="fas fa-bars"></i>
-          <i className="fas fa-times"></i>
-        </div>
         </ul>
       </div>
     </>
@@ -152,6 +236,11 @@ const Cursor = ({ position }) => {
 };
 
 // NavBar Ends-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 // Projects Starts----------------------------------------------------------------------------------------------------------------
 
@@ -234,6 +323,12 @@ const CardTitle = ({ children }) => {
 // BouncingCards Ends-----------------------------------
 
 // Projects Ends--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 // About Starts---------------------------------------------------------------------------------------------------------------------------
 
