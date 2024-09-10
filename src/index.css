@@ -157,7 +157,7 @@
 
 /* @media screen and (min-width: 320px) and (max-width:480px) {
     .mobile-screen{
-        height: 100vh;
+        height: screen  ;
     }
 
     .ai-arrow-container{
@@ -171,18 +171,61 @@
 } */
 
 
-/* ================================================================================ */
+
+
+
+
+/* =============================================================================== */
+
+
+
 
 
 #AiNav {
     /* Default height for large screens */
-    height: screen;
+    height: auto;
+    min-height: 100vh; /* Ensure it covers the full viewport on larger screens */
   }
   
   /* Mobile screens (320px - 480px) */
   @media screen and (min-width: 320px) and (max-width: 480px) {
     #AiNav {
-      height: 100vh; /* Full height on mobile devices */
+      min-height: calc(100vh - 56px); /* Subtract bottom padding or address bar height */
+      height: auto;
+    }
+  
+    .ai-arrow-container {
+      position: absolute;
+      bottom: 10px; /* Adjust bottom padding to ensure arrow is visible */
+    }
+  
+    .ai-arrow-line {
+      position: absolute;
+      bottom: 10px; /* Same adjustment for the line */
+    }
+  }
+  
+  /* Tablet screens (481px - 850px) */
+  @media screen and (min-width: 481px) and (max-width: 850px) {
+    #AiNav {
+      min-height: calc(100vh - 56px); /* Similar adjustment for tablet devices */
+      height: auto;
+    }
+  
+    .ai-arrow-container {
+      bottom: 10px;
+    }
+  
+    .ai-arrow-line {
+      bottom: 10px;
+    }
+  }
+  
+  /* Larger screens (above 850px) */
+  @media screen and (min-width: 851px) {
+    #AiNav {
+      height: auto;
+      min-height: 100vh; /* Reset to fill the viewport */
     }
   
     .ai-arrow-container {
@@ -196,21 +239,38 @@
     }
   }
   
-  /* Tablet screens (481px - 850px) */
-  @media screen and (min-width: 481px) and (max-width: 850px) {
-    #AiNav {
-      height: 100vh; /* Full height for tablets as well */
-    }
-  }
-  
-  /* Larger screens (above 850px) */
-  @media screen and (min-width: 851px) {
-    #AiNav {
-      /* height: screen; Set height automatically based on content */
-    }
-  }
-  
-/* ================================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
