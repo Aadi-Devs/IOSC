@@ -190,7 +190,7 @@
   /* Mobile screens (320px - 480px) */
   @media screen and (min-width: 320px) and (max-width: 480px) {
     #AiNav {
-      min-height: calc(100vh - 70px); /* Subtract bottom padding or address bar height */
+      min-height: calc(100vh - 67px); /* Subtract bottom padding or address bar height */
       height: auto;
     }
   
