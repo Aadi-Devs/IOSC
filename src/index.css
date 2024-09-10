@@ -155,9 +155,9 @@
 /* Responsive AI Starts */
 
 
-@media screen and (min-width: 320px) and (max-width:480px) {
+/* @media screen and (min-width: 320px) and (max-width:480px) {
     .mobile-screen{
-        height: 100%;
+        height: 100vh;
     }
 
     .ai-arrow-container{
@@ -168,8 +168,49 @@
         position: absolute;
         bottom: 0.1px;
     }
-}
+} */
 
+
+/* ================================================================================ */
+
+
+#AiNav {
+    /* Default height for large screens */
+    height: screen;
+  }
+  
+  /* Mobile screens (320px - 480px) */
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    #AiNav {
+      height: 100vh; /* Full height on mobile devices */
+    }
+  
+    .ai-arrow-container {
+      position: absolute;
+      bottom: 0.1px;
+    }
+  
+    .ai-arrow-line {
+      position: absolute;
+      bottom: 0.1px;
+    }
+  }
+  
+  /* Tablet screens (481px - 850px) */
+  @media screen and (min-width: 481px) and (max-width: 850px) {
+    #AiNav {
+      height: 100vh; /* Full height for tablets as well */
+    }
+  }
+  
+  /* Larger screens (above 850px) */
+  @media screen and (min-width: 851px) {
+    #AiNav {
+      /* height: screen; Set height automatically based on content */
+    }
+  }
+  
+/* ================================================================================== */
 
 
 
