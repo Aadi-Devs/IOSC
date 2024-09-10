@@ -146,7 +146,7 @@ const Nav = () => {
             />
           </svg>
         </div>
-        <div className="ai-arrow-line absolute flex justify-center bottom-[0.1px] w-full  h-[20px]"></div>
+        <div className="ai-arrow-line absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
       </div>
     </div>
   );
