@@ -198,8 +198,8 @@
   @media screen and (min-width: 481px) and (max-width: 850px) {
     #AiNav {
       /* min-height: calc(100vh - 56px); Similar adjustment for tablet devices */
-      min-height: 100dvh;
-      height: auto;
+      height: 100dvh;
+      /* height: auto; */
     }
   
     /* .ai-arrow-container {
@@ -218,8 +218,8 @@
   /* Larger screens (above 850px) */
   @media screen and (min-width: 851px) {
     #AiNav {
-      height: auto;
-      min-height: 100dvh;
+      /* height: auto; */
+      height: 100dvh;
     }
   
     /* .ai-arrow-container {
