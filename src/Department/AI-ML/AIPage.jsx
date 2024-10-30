@@ -7,13 +7,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const AIPage = () => {
-
-
   // Scroll to the top when the component is mounted
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
 
   // Fade-Up
   useEffect(() => {
@@ -38,16 +35,7 @@ const AIPage = () => {
 
 export default AIPage;
 
-
-
-
-
-
-
 // NavBar Starts-------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -154,18 +142,20 @@ const Nav = () => {
             Events
           </li>
           <li
-           className="cursor-pointer text-lg"
-           onClick={() => {
-            document.getElementById("AiFooter")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          >Contact Us</li>
+            className="cursor-pointer text-lg"
+            onClick={() => {
+              document.getElementById("AiFooter")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Contact Us
+          </li>
         </ul>
       </div>
 
       {/* Animated arrow at the bottom */}
-      <div className="h-[50px] w-full flex flex-col items-center justify-center">
+      <div className="h-[50px] absolute w-full flex flex-col items-center justify-end bottom-[0.1px]">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
@@ -189,7 +179,7 @@ const Nav = () => {
             />
           </svg>
         </div>
-        <div className="ai-arrow-line absolute flex justify-center bottom-[0.1px] w-full bg-white h-[20px]"></div>
+        <div className="ai-arrow-line absolute flex justify-center w-full bg-white h-[20px]"></div>
       </div>
     </div>
   );
@@ -295,16 +285,7 @@ const Cursor = ({ position }) => {
   );
 };
 
-
-
-
-
 // NavBar Ends-------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 
 // Projects Starts----------------------------------------------------------------------------------------------------------------
 
@@ -321,12 +302,7 @@ const Projects = () => {
   );
 };
 
-
-
-
 // BouncingCards Starts--------------------------------
-
-
 
 const BouncyCardsFeatures = () => {
   return (
@@ -341,10 +317,10 @@ const BouncyCardsFeatures = () => {
         data-aos="fade-down"
       >
         <BounceCardLeft className="col-span-12 md:col-span-4">
-          <CardTitle>Project-1</CardTitle>
+          <CardTitle>Deep Fake Detection</CardTitle>
         </BounceCardLeft>
         <BounceCardRight className="col-span-12 md:col-span-8 overflow-x-hidden">
-          <CardTitle>Project-2</CardTitle>
+          <CardTitle>AI Gym Trainer</CardTitle>
         </BounceCardRight>
       </div>
       <div
@@ -352,10 +328,10 @@ const BouncyCardsFeatures = () => {
         data-aos="fade-up"
       >
         <BounceCardLeft className="col-span-12 md:col-span-8">
-          <CardTitle>Project-3</CardTitle>
+          <CardTitle>AI Projectile Motion Calculator</CardTitle>
         </BounceCardLeft>
         <BounceCardRight className="col-span-12 md:col-span-4 overflow-x-hidden">
-          <CardTitle>Project-4</CardTitle>
+          <CardTitle>AI Ball Dodge Game</CardTitle>
         </BounceCardRight>
       </div>
     </section>
@@ -392,39 +368,22 @@ const CardTitle = ({ children }) => {
   );
 };
 
-
-
 // BouncingCards Ends-----------------------------------
-
-
-
-
 
 // Projects Ends--------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
 // About Starts---------------------------------------------------------------------------------------------------------------------------
 
-
-
-
 const About = () => {
+  const [isFlipped1, setIsFlipped1] = useState(false);
+  const [isFlipped2, setIsFlipped2] = useState(false);
+
   return (
     <div
       id="AiAbout"
-      className="flex items-center justify-center h-screen w-full bg-[#000029] p-4"
+      className="flex items-center justify-center h-full w-full bg-[#000029] p-4 overflow-x-hidden"
     >
-      <div className="main-container flex flex-col items-center h-[40rem] w-full mt-7">
+      <div className="main-container flex flex-col items-center h-full w-full mt-7">
         <div className="team-and-heading-cont flex flex-col items-center gap-[8rem] mt-5">
           {/* Heading */}
           <div className="heading-container" data-aos="fade-up">
@@ -432,13 +391,13 @@ const About = () => {
           </div>
 
           {/* Team Members */}
-          <div className="team-card-container flex gap-[6rem]">
+          {/* <div className="team-card-container flex gap-[6rem]">
             <div
               className="flex flex-col items-center gap-6"
               data-aos="fade-right"
             >
               <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
-              <h3 className="text-white text-2xl">Priyanshu</h3>
+              <h3 className="text-white text-2xl">Priyanshu Satapathy</h3>
             </div>
 
             <div
@@ -446,13 +405,88 @@ const About = () => {
               data-aos="fade-left"
             >
               <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
-              <h3 className="text-white text-2xl">Bhumik</h3>
+              <h3 className="text-white text-2xl">Bhumik Kumar</h3>
+            </div>
+          </div> */}
+
+          {/* Team Members */}
+          <div className="team-member flex gap-[6rem]">
+            {/* Member - 1 */}
+            <div className="flex flex-col gap-8" data-aos="fade-right">
+              <div
+                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
+                  isFlipped1 ? "flipped" : ""
+                }`}
+                onClick={() => setIsFlipped1(!isFlipped1)}
+              >
+                <div className="flip-card-inner w-[100%] h-[100%]">
+                  <div
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
+                      Click to Flip
+                    </h1>
+                  </div>
+
+                  <div
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <p className="text-center text-xl">
+                      "Priyanshu Satapathy, head of IOSC-BVP's AI/ML department,
+                      is a visionary leader fostering a collaborative community.
+                      Through projects, hackathons, and workshops, he empowers
+                      students to apply AI/ML to real-world challenges."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-white text-center text-2xl">
+                  Priyanshu Satapathy
+                </h1>
+              </div>
             </div>
 
-            {/* <div className="flex flex-col items-center gap-6">
-              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-110 transition-all duration-700 rounded-2xl"></div>
-              <h3 className="text-white">Bhumik</h3>
-            </div> */}
+            {/* Member - 2 */}
+            <div className="flex flex-col gap-8" data-aos="fade-left">
+              <div
+                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
+                  isFlipped2 ? "flipped" : ""
+                }`}
+                onClick={() => setIsFlipped2(!isFlipped2)}
+              >
+                <div className="flip-card-inner w-[100%] h-[100%]">
+                  <div
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
+                      Click to Flip
+                    </h1>
+                  </div>
+
+                  <div
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <p className="text-center text-xl">
+                      "Bhumik, head of IOSC-BVP's AI/ML department, inspires
+                      students through hands-on workshops and hackathons. He
+                      fosters ethical AI practices, multidisciplinary
+                      applications, and a collaborative environment, building a
+                      skilled, socially aware community."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-white text-center text-2xl">
+                  Bhumik Kumar
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -460,22 +494,7 @@ const About = () => {
   );
 };
 
-
-
-
 // About Ends-----------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Info Starts----------------------------------------------------------------------------------------------------------------------------
 
@@ -519,11 +538,6 @@ const About = () => {
 //   );
 // };
 
-
-
-
-
-
 // TEXTPARALLAX STARTS
 
 const TextParallaxContentExample = () => {
@@ -543,26 +557,18 @@ const TextParallaxContentExample = () => {
       >
         <ExampleContent2 />
       </TextParallaxContent>
-      <TextParallaxContent
+      {/* <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Modern"
         heading="Dress for the best."
       >
         <ExampleContent3 />
-      </TextParallaxContent>
+      </TextParallaxContent> */}
     </div>
   );
 };
 
-
-
-
-
 // Image Heading Starts
-
-
-
-
 
 const IMG_PADDING = 12;
 
@@ -584,14 +590,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   );
 };
 
-
-
-
 // Image Heading Ends
-
-
-
-
 
 // Images Function Starts
 
@@ -630,11 +629,6 @@ const StickyImage = ({ imgUrl }) => {
 
 // Images Function Ends
 
-
-
-
-
-
 const OverlayCopy = ({ subheading, heading }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -662,27 +656,23 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-
-
-
-
 // Content Starts
 
 const ExampleContent1 = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 ">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
-      Additional content explaining the above card here
+      INTEL SPEAKER SESSION BY OUR PRESIDENT VISHAL GUPTA FOR FRESHERS
     </h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral-600 md:text-2xl text-zinc-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+        Under President Vishal Gupta's leadership, IOSC-BVP hosted an Intel
+        Speaker Session, introducing new members to the club’s mission,
+        achievements, and goals. Vishal covered ML basics, offering foundational
+        insights for beginners.
       </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+        He also presented Intel’s OneAPI toolkit, highlighting its diverse
+        accelerator support.
       </p>
     </div>
   </div>
@@ -691,63 +681,47 @@ const ExampleContent1 = () => (
 const ExampleContent2 = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
-      Additional content explaining the above card here
+      AI FOR EVERYONE
     </h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+        The IOSC-BVP AI/ML department held 'AI for Everyone', a multi-day event
+        introducing foundational AI concepts. Day one covered Python basics,
+        followed by data visualization techniques using Matplotlib and Seaborn,
+        and machine learning algorithms on day three.
       </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+        Students concluded by creating interactive ML web apps with Streamlit.
       </p>
     </div>
   </div>
 );
 
-const ExampleContent3 = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
-      Additional content explaining the above card here
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
-      </p>
-    </div>
-  </div>
-);
+// const ExampleContent3 = () => (
+//   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+//     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
+//       Additional content explaining the above card here
+//     </h2>
+//     <div className="col-span-1 md:col-span-8">
+//       <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+//         blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+//         maiores voluptate est ut saepe accusantium maxime doloremque nulla
+//         consectetur possimus.
+//       </p>
+//       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+//         reiciendis blanditiis aliquam aut fugit sint.
+//       </p>
+//     </div>
+//   </div>
+// );
 
 // Content Ends
 
-
-
-
-
 // TEXTPARALLAX ENDS
 
-
-
-
-
 // Info Ends----------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
 
 // Footer Starts-----------------------------------------------------------------------------------------------------------------------------
 
@@ -889,18 +863,17 @@ const Footer = () => {
         <hr className="my-6 border-blueGray-300"></hr>
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-          <div className="text-sm text-white font-semibold py-1">
-                Developed By
-                <a
-                  href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
-                  className="text-white hover:text-blue-600"
-                  target="_blank"
-                >
-                  {" "}
-                  Aditya Shrivastav
-                </a>
-
-              </div>
+            <div className="text-sm text-white font-semibold py-1">
+              Developed By
+              <a
+                href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
+                className="text-white hover:text-blue-600"
+                target="_blank"
+              >
+                {" "}
+                Aditya Shrivastav
+              </a>
+            </div>
           </div>
         </div>
       </div>

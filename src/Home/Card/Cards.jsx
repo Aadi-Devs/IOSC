@@ -53,7 +53,7 @@ const Cards = () => {
                     <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
                       Techgenesis 2023
                     </h1>
-                    <p className="flip-card-p text-center">
+                    <p className="flip-card-p text-center text-xl">
                       "Embark on a journey through innovation, creativity, and
                       real-world challenges with our flagship event featuring
                       DevFusion, Projexon, and Hire Harbour."
@@ -61,17 +61,17 @@ const Cards = () => {
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
                   >
-                    <h1 className="text-2xl font-bol my-[1.5rem]">
-                      Techgenesis 2023
-                    </h1>
-                    <p className="text-center">
-                      "Techgenesis, our first-ever flagship event, brought
-                      together brilliant minds to compete and showcase their
-                      skills across three unique events: DevFusion, a 24-hour
-                      hackathon; Projexon, a project exhibition."
+                    <p className="text-center text-xl">
+                      "So many participants, along with mentorship from tech
+                      industry experts. Hands-on project demonstrations and
+                      awards in Projexon. Placement simulator experience through
+                      Hire Harbour for career readiness. Techgenesis set the
+                      foundation for future flagship events with high
+                      engagement, technical achievements, and industry
+                      interactions."
                     </p>
                   </div>
                 </div>
@@ -83,7 +83,10 @@ const Cards = () => {
               </div>
               <div className="flip-card-event-info flex justify-center text-end text-2xl text-white">
                 <p>
-                Techgenesis 2023 by IOSC-BVP featured a 24-hour hackathon, DevFusion, fostering innovation. Projexon highlighted student projects, while Hire Harbour simulated job placements, enhancing skills and teamwork among aspiring tech leaders.
+                  "Techgenesis 2023 by IOSC-BVP featured a 24-hour hackathon,
+                  DevFusion, fostering innovation. Projexon highlighted student
+                  projects, while Hire Harbour simulated job placements,
+                  enhancing skills and teamwork among aspiring tech leaders."
                 </p>
               </div>
             </div>
@@ -96,14 +99,14 @@ const Cards = () => {
           >
             <div className="flip-card-event-info-container flex flex-col justify-center gap-16 h-[20rem] w-[47rem]">
               <div className="flip-card-event-heading text-6xl text-white">
-                <h1>Summer Hack 2023</h1>
+                <h1>Ideate</h1>
               </div>
               <div className="flip-card-event-info flex justify-center text-2xl text-white">
                 <p>
-                  Summer Hack 2023, organized by IOSC-BVP, offered students a
-                  platform to showcase technical skills and creativity. Guided
-                  by mentors, participants explored innovative ideas using
-                  cutting-edge technology.
+                  "Ideate, IOSC-BVP’s first ideathon, challenged 100+ students
+                  to creatively solve modern issues, fostering teamwork,
+                  mentorship, and innovation. Top ideas received awards,
+                  establishing IOSC-BVP as a problem-solving hub."
                 </p>
               </div>
             </div>
@@ -118,31 +121,29 @@ const Cards = () => {
                   <div
                     className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
-                    // style={{ backgroundColor: `cornflowerblue` }}
                   >
                     <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
-                      Summer Hack 2023
+                      Ideate
                     </h1>
-                    <p className="flip-card-p text-center">
-                      "Unleash your creativity and problem-solving skills in a
-                      fast-paced environment. Tackle real-world challenges with
-                      innovative solutions alongside like-minded individuals."
+                    <p className="flip-card-p text-center text-xl">
+                      "The first major ideathon of IOSC-BVP: A challenge to
+                      brainstorm solutions. Expert mentorship sessions guiding
+                      ideation. Awards for top ideas with development
+                      opportunities."
                     </p>
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
-                    // style={{ backgroundColor: `red` }}
                   >
-                    <h1 className="text-2xl font-bold/ my-[1.5rem]">
-                      Summer Hack 2023
-                    </h1>
-                    <p className="text-center">
-                      "Summer Hack 2023 brought together coders, designers, and
-                      problem solvers to innovate, build, and present solutions
-                      to real-world problems. Participants worked in teams to
-                      create projects within a 48-hour deadline."
+                    <p className="text-center text-xl">
+                      "High participation with a collaborative and competitive
+                      spirit. Successful presentations of unique ideas with
+                      real-world applications. Recognition for top-performing
+                      teams, opening doors for future development. Ideate was a
+                      success in sparking innovative thinking and showcasing the
+                      creative potential of our students."
                     </p>
                   </div>
                 </div>
@@ -167,24 +168,26 @@ const Cards = () => {
                     className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
                   >
-                    <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
-                      Sky
+                    <h1 className="flip-card-h1 text-center text-2xl font-bold/ mt-[1.2rem]">
+                      AI for Everyone - AI/ML Bootcamp
                     </h1>
-                    <p className="flip-card-p">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Magnam voluptates illo officiis perferendis tempore
-                      aliquam.
+                    <p className="flip-card-p text-center text-xl">
+                      "A week-long bootcamp exploring AI/ML fundamentals:
+                      Beginner-friendly sessions from Python basics to ML
+                      models. Hands-on AI and ML project work. Guidance from
+                      industry mentors."
                     </p>
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
                   >
-                    <h1 className="text-2xl font-bol my-[1.5rem]">Earth</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eveniet nulla repellat explicabo quis labore? Culpa!
+                    <p className="text-center text-xl">
+                      "Covered foundational concepts and advanced applications
+                      in AI/ML. Hands-on project experience applying machine
+                      learning skills. Industry networking and mentorship that
+                      supported learning."
                     </p>
                   </div>
                 </div>
@@ -192,14 +195,14 @@ const Cards = () => {
             </div>
             <div className="flip-card-event-info-container flex flex-col justify-center gap-16 h-[20rem] w-[47rem]">
               <div className="flip-card-event-heading text-6xl text-end text-white">
-                <h1>Event Heading</h1>
+                <h1>AI for Everyone</h1>
               </div>
               <div className="flip-card-event-info flex justify-center text-end text-2xl text-white">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                  ad corrupti impedit consectetur ratione tempore quia, quasi
-                  eligendi velit deleniti quae maiores error dolores at dolorum
-                  ullam quas nesciunt facere.
+                  "AI for Everyone, a beginner-friendly bootcamp, introduced
+                  students to Python, data analysis, and ML projects with
+                  hands-on guidance from mentors, building a solid foundation in
+                  AI through practical application"
                 </p>
               </div>
             </div>
@@ -212,14 +215,14 @@ const Cards = () => {
           >
             <div className="flip-card-event-info-container flex flex-col justify-center gap-16 h-[20rem] w-[47rem]">
               <div className="flip-card-event-heading text-6xl text-white">
-                <h1>Event Heading</h1>
+                <h1>WebD Workshop</h1>
               </div>
               <div className="flip-card-event-info flex justify-center text-2xl text-white">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                  ad corrupti impedit consectetur ratione tempore quia, quasi
-                  eligendi velit deleniti quae maiores error dolores at dolorum
-                  ullam quas nesciunt facere.
+                  "The WebD Workshop was a week-long bootcamp teaching web
+                  development fundamentals to advanced JavaScript. Participants
+                  built portfolio-ready projects, gained practical skills, and
+                  connected with fellow aspiring developers."
                 </p>
               </div>
             </div>
@@ -236,25 +239,28 @@ const Cards = () => {
                     style={{ backgroundImage: `url(${Vite})` }}
                     // style={{ backgroundColor: `cornflowerblue` }}
                   >
-                    <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
-                      Sky
+                    <h1 className="flip-card-h1 text-center text-2xl font-bold/ mt-[1.2rem]">
+                      WebD Workshop - Web Development Bootcamp
                     </h1>
-                    <p className="flip-card-p">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Magnam voluptates illo officiis perferendis tempore
-                      aliquam.
+                    <p className="flip-card-p text-center text-xl">
+                      "A week-long bootcamp for aspiring web developers: Basics
+                      of HTML, CSS, and JavaScript. Hands-on projects for
+                      practical experience. Portfolio building and networking
+                      opportunities."
                     </p>
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
-                    // style={{ backgroundColor: `red` }}
                   >
-                    <h1 className="text-2xl font-bold/ my-[1.5rem]">Earth</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eveniet nulla repellat explicabo quis labore? Culpa!
+                    <p className="text-xl text-center">
+                      "Engaging sessions covering essential web dev skills.
+                      Practical projects to build a strong development
+                      portfolio. Collaboration and mentorship to guide progress.
+                      The WebD Workshop was a success, establishing solid web
+                      foundations for many students and encouraging further
+                      exploration in development."
                     </p>
                   </div>
                 </div>

@@ -181,11 +181,11 @@
     /* .ai-arrow-container {
       position: absolute;
       bottom: 0px; Adjust bottom padding to ensure arrow is visible
-    }
+    } */
   
-    .ai-arrow-line {
+    /* .ai-arrow-line {
       position: absolute;
-      bottom: 0px; Same adjustment for the line
+      bottom: -15.9px; 
     } */
   }
   
@@ -314,6 +314,152 @@
 
 
 
+
+  /* Team Member Cards */
+
+
+
+
+
+
+
+  @media screen and (min-width: 1024px) and (max-width:1200px) {
+
+    .card{
+      height: 25rem;
+      width: 20rem;
+    }
+    .card:hover{
+      transform: scale(1.08);
+    }
+  
+    .flip-card-event-heading{
+      font-size: 2.3rem;
+    }
+    .flip-card-event-info{
+      font-size: 1.2rem;
+    }
+  
+    .event-wrapper{
+      gap: 4rem;
+    }
+  
+  }
+  
+  
+  
+  @media screen and (min-width: 800px) and (max-width:850px){
+    .event-wrapper{
+      margin: 4rem 1.3rem;
+      gap: 4rem;
+    } 
+  
+    .card{
+      height: 22rem;
+      width: 17rem;
+    }
+  
+    .flip-card-back{
+      gap: 1rem;
+    }
+  
+    .flip-card-back p{
+      font-size: 0.9rem;
+    }
+  
+    .flip-card-h1{
+      font-size: 1.5rem;
+    }
+  
+  }
+  
+  
+  
+  
+  
+  @media screen and (min-width: 600px) and (max-width:768px) {
+  
+    .event-wrapper{
+      margin: 4rem 1.3rem;
+      gap: 4rem;
+    } 
+  
+    .flip-card-event-info-container{
+      gap: 3rem;
+    } 
+  
+    .card{
+      height: 22rem;
+      width: 17rem;
+    }
+
+    .flip-card-front{
+      gap: 1rem;
+    }
+    .flip-card-back{
+      gap: 1rem;
+    }
+  
+    .flip-card-back p{
+      font-size: 0.9rem;
+    }
+  
+    .flip-card-p{
+      font-size: 1rem;
+    }
+    .flip-card-h1{
+      font-size: 1.5rem;
+    }
+
+    .team-member{
+      flex-direction: column;
+      gap: 8rem;
+    }
+  
+  }
+  
+  
+  
+  
+  @media screen and (min-width: 320px) and (max-width: 480px){
+  
+    .card:hover{
+      transform: scale(1.05);
+    }
+    
+    .team-member{
+      flex-direction: column;
+    }
+  
+    .card{
+      height: 20rem;
+      width: 17rem;
+    }
+  
+    .event-wrapper2{
+      flex-direction: column-reverse;
+    }
+  
+    .flip-card-front{
+      gap: 1rem;
+    }
+    .flip-card-back{
+      gap: 1rem;
+    }
+  
+    .flip-card-back p{
+      font-size: 0.9rem;
+    }
+  
+  
+  
+    /* .flip-card-p{
+      font-size: 1rem;
+    }
+    .flip-card-h1{
+      font-size: 1.5rem;
+    } */
+  }
 
 
 

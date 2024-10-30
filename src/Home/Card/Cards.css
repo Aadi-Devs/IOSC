@@ -28,31 +28,26 @@
 }
 
 
-
-/* Responsive */
-
-
-
-
-/* @media screen and (min-width: 1200px) and (max-width:1440px) {
-  
-
-  .event-wrapper{
-    /* margin: 4rem 4rem; */
-    /* gap: 400rem;/ */
-  /* }  */
-/* } */
+/* ---------------------------------------------------------------------------------------------------------------------- */
 
 
 
 
 
+
+
+
+/* Responsive ---------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* Responsive Cards Starts ------------------------------------------------------------------------------------------------------------------ */
 
 
 @media screen and (min-width: 1024px) and (max-width:1200px) {
-  /* .event-container{
-    /* height: 5rem; */
-  /* } */ */
 
   .card{
     height: 25rem;
@@ -68,6 +63,11 @@
   .flip-card-event-info{
     font-size: 1.2rem;
   }
+
+  .event-wrapper{
+    gap: 4rem;
+  }
+
 }
 
 
@@ -95,6 +95,24 @@
   }
   .flip-card-event-info{
     font-size: 1rem;
+  }
+
+  .flip-card-front{
+    gap: 1rem;
+  }
+  .flip-card-back{
+    gap: 1rem;
+  }
+
+  .flip-card-back p{
+    font-size: 0.9rem;
+  }
+
+  .flip-card-p{
+    font-size: 1rem;
+  }
+  .flip-card-h1{
+    font-size: 1.5rem;
   }
 
 }
@@ -126,9 +144,30 @@
     font-size: 1.8rem;
   }
   .flip-card-event-info{
+    font-size: 0.9rem;
+  }
+
+  .flip-card-front{
+    gap: 1rem;
+  }
+  .flip-card-back{
+    gap: 1rem;
+  }
+
+  .flip-card-back p{
+    font-size: 0.9rem;
+  }
+
+  .flip-card-p{
     font-size: 1rem;
   }
+  .flip-card-h1{
+    font-size: 1.5rem;
+  }
+
 }
+
+
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -138,9 +177,8 @@
 
   }
 
-
   #Events{
-    gap: 10rem;
+    gap: 9rem;
   }
 
   .card{
@@ -155,18 +193,15 @@
   .event-wrapper{
     flex-direction: column;
     height: 43rem;
-    /* width: 15rem; */
-
     margin: auto;
     gap: 2rem;
   } 
 
 
   .flip-card-event-info-container{
-    gap: 2rem;
+    gap: 1rem;
     width: 15rem;
   } 
-
 
   .flip-card-event-heading{
     font-size: 2rem;
@@ -185,4 +220,27 @@
   .event-wrapper2{
     flex-direction: column-reverse;
   }
+
+  .flip-card-front{
+    gap: 1rem;
+  }
+  .flip-card-back{
+    gap: 1rem;
+  }
+
+  .flip-card-back p{
+    font-size: 0.9rem;
+  }
+
+
+
+  .flip-card-p{
+    font-size: 1rem;
+  }
+  .flip-card-h1{
+    font-size: 1.5rem;
+  }
 }
+
+
+/* Responsive Cards Ends ------------------------------------------------------------------------------------------------------------------ */

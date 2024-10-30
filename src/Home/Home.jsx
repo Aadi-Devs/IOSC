@@ -103,9 +103,9 @@ const Home = () => {
                       <span>Home</span>
                     </a>
                   </li>
-                  {/* <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
+                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
                     <span>Team</span>
-                  </Link> */}
+                  </Link>
                   <Link
                     className="p-5 xl:p-8 hover:text-blue-600"
                     onClick={() => scrollToElement("Departments", 1500)}
