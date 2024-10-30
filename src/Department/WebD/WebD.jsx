@@ -439,7 +439,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           },
         }}
         transition={{ type: "spring" }}
-        className="relative z-10 p-4 absolute right-2"
+        className="relative z-10 p-4 absolute right-8"
       >
         <FiArrowRight className="text-5xl text-neutral-50" />
       </motion.div>
