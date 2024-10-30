@@ -166,15 +166,15 @@
 
 #AiNav {
     /* Default height for large screens */
-    height: auto;
-    min-height: 100dvh; /* Ensure it covers the full viewport on larger screens */
+    /* height: auto; */
+    height: 100dvh; /* Ensure it covers the full viewport on larger screens */
   }
   
   /* Mobile screens (320px - 480px) */
   @media screen and (min-width: 320px) and (max-width: 480px) {
     #AiNav {
       /* min-height: calc(100vh - 66px); Subtract bottom padding or address bar height */
-      min-height: 100dvh;
+      height: 100dvh;
       /* height: auto; */
     }
   
