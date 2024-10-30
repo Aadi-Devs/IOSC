@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-screen w-full relative  overflow-hidden">
+      <div className="h-screen w-full relative overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={videoSrc}
@@ -103,9 +103,9 @@ const Home = () => {
                       <span>Home</span>
                     </a>
                   </li>
-                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
+                  {/* <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
                     <span>Team</span>
-                  </Link>
+                  </Link> */}
                   <Link
                     className="p-5 xl:p-8 hover:text-blue-600"
                     onClick={() => scrollToElement("Departments", 1500)}
@@ -328,3 +328,6 @@ export default Home;
 // };
 
 // export default Home;
+
+
+// dc:f5:05:ed:0f:ef

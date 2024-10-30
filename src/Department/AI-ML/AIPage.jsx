@@ -1,27 +1,53 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import Sky from "../../Assets/Sky.jpg";
-import Night from "../../Assets/night.jpg";
+import { motion, useScroll, useTransform } from "framer-motion";
+import twitter from "../../Assets/icons8-twitter-48.png";
+import instagram from "../../Assets/instagram.png";
 import "../../index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AIPage = () => {
+
+
   // Scroll to the top when the component is mounted
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
+
+  // Fade-Up
   useEffect(() => {
-    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000, // duration of the animation
+      easing: "ease-in-out", // easing of the animation
+      once: false, // animation occurs only once
+    });
   }, []);
 
   return (
     <>
       <Nav />
       <Projects />
+      <TextParallaxContentExample />
       <About />
+      {/* <Info /> */}
+      <Footer />
     </>
   );
 };
 
 export default AIPage;
 
+
+
+
+
+
+
 // NavBar Starts-------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +70,7 @@ const Nav = () => {
     >
       {windowWidth < 850 ? (
         // Show hamburger icon for screens smaller than 850px
-        <div className="flex justify-between w-full items-center fixed p-4">
+        <div className="flex justify-between w-full items-center fixed p-4 z-10">
           <div className="text-white">Logo</div>
           <div
             onClick={() => setIsOpen(!isOpen)}
@@ -114,10 +140,27 @@ const Nav = () => {
               });
             }}
           >
-            About
+            Our Team
           </li>
-          <li className="cursor-pointer text-lg">Docs</li>
-          <li className="cursor-pointer text-lg">Blog</li>
+          <li
+            className="cursor-pointer text-lg"
+            onClick={() => {
+              setIsOpen(false);
+              document.getElementById("AiParallax")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Events
+          </li>
+          <li
+           className="cursor-pointer text-lg"
+           onClick={() => {
+            document.getElementById("AiFooter")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          >Contact Us</li>
         </ul>
       </div>
 
@@ -188,10 +231,27 @@ const SlideTabs = () => {
               });
             }}
           >
-            <Tab setPosition={setPosition}>About</Tab>
+            <Tab setPosition={setPosition}>Our Team</Tab>
           </div>
-          <Tab setPosition={setPosition}>Docs</Tab>
-          <Tab setPosition={setPosition}>Blog</Tab>
+          <div
+            onClick={() => {
+              document.getElementById("AiParallax")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <Tab setPosition={setPosition}>Events</Tab>
+          </div>
+
+          <div
+            onClick={() => {
+              document.getElementById("AiFooter")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <Tab setPosition={setPosition}>Contact Us</Tab>
+          </div>
 
           <Cursor position={position} />
         </ul>
@@ -235,6 +295,10 @@ const Cursor = ({ position }) => {
   );
 };
 
+
+
+
+
 // NavBar Ends-------------------------------------------------------------------------------------------------------------------
 
 
@@ -248,10 +312,7 @@ const Projects = () => {
   return (
     <div
       id="AiProjects"
-      className="min-h-screen w-full bg-fixed z-[1]"
-      style={{
-        backgroundColor: "green",
-      }}
+      className="min-h-screen w-full bg-fixed z-[1] bg-[#000029]"
     >
       <div className="flex flex-col h-full px-4 md:px-6">
         <BouncyCardsFeatures />
@@ -260,7 +321,12 @@ const Projects = () => {
   );
 };
 
+
+
+
 // BouncingCards Starts--------------------------------
+
+
 
 const BouncyCardsFeatures = () => {
   return (
@@ -270,7 +336,10 @@ const BouncyCardsFeatures = () => {
           Our Projects
         </h2>
       </div>
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div
+        className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4"
+        data-aos="fade-down"
+      >
         <BounceCardLeft className="col-span-12 md:col-span-4">
           <CardTitle>Project-1</CardTitle>
         </BounceCardLeft>
@@ -278,7 +347,10 @@ const BouncyCardsFeatures = () => {
           <CardTitle>Project-2</CardTitle>
         </BounceCardRight>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div
+        className="grid grid-cols-1 md:grid-cols-12 gap-4"
+        data-aos="fade-up"
+      >
         <BounceCardLeft className="col-span-12 md:col-span-8">
           <CardTitle>Project-3</CardTitle>
         </BounceCardLeft>
@@ -320,7 +392,13 @@ const CardTitle = ({ children }) => {
   );
 };
 
+
+
 // BouncingCards Ends-----------------------------------
+
+
+
+
 
 // Projects Ends--------------------------------------------------------------------------------------------------------------------------
 
@@ -330,17 +408,504 @@ const CardTitle = ({ children }) => {
 
 
 
+
+
+
+
+
 // About Starts---------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 const About = () => {
   return (
-    <div id="AiAbout" className="min-h-screen w-full bg-red-950 p-4 md:p-6">
-      <h1 className="text-white text-2xl md:text-4xl">About Us</h1>
-      <p className="text-white mt-4 text-sm md:text-base">
-        Some content about the project or company.
-      </p>
+    <div
+      id="AiAbout"
+      className="flex items-center justify-center h-screen w-full bg-[#000029] p-4"
+    >
+      <div className="main-container flex flex-col items-center h-[40rem] w-full mt-7">
+        <div className="team-and-heading-cont flex flex-col items-center gap-[8rem] mt-5">
+          {/* Heading */}
+          <div className="heading-container" data-aos="fade-up">
+            <h1 className="text-7xl text-white font-semibold">Our Team</h1>
+          </div>
+
+          {/* Team Members */}
+          <div className="team-card-container flex gap-[6rem]">
+            <div
+              className="flex flex-col items-center gap-6"
+              data-aos="fade-right"
+            >
+              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
+              <h3 className="text-white text-2xl">Priyanshu</h3>
+            </div>
+
+            <div
+              className="flex flex-col items-center gap-6"
+              data-aos="fade-left"
+            >
+              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
+              <h3 className="text-white text-2xl">Bhumik</h3>
+            </div>
+
+            {/* <div className="flex flex-col items-center gap-6">
+              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-110 transition-all duration-700 rounded-2xl"></div>
+              <h3 className="text-white">Bhumik</h3>
+            </div> */}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
+
+
+
 // About Ends-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Info Starts----------------------------------------------------------------------------------------------------------------------------
+
+// const Info = () => {
+//   return (
+//     <>
+//       <div className="flex items-center justify-center h-screen w-full">
+//         <div className="flex items-center justify-center bg-red-600 h-[42rem] w-[90rem]">
+//           {/* container - 1 */}
+//           <div className="">
+//             <div className="">
+//               <img src="" alt="" className="" />
+//             </div>
+//             <div className="">
+//               <p className=""></p>
+//             </div>
+//           </div>
+
+//           {/* container 2 */}
+//           <div className="">
+//             <div className="">
+//               <img src="" alt="" className="" />
+//             </div>
+//             <div className="">
+//               <p className=""></p>
+//             </div>
+//           </div>
+
+//           {/* container 3 */}
+//           <div className="">
+//             <div className="">
+//               <img src="" alt="" className="" />
+//             </div>
+//             <div className="">
+//               <p className=""></p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+
+
+
+
+
+// TEXTPARALLAX STARTS
+
+const TextParallaxContentExample = () => {
+  return (
+    <div id="AiParallax" className="pt-20 bg-[#000029]">
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Collaborate"
+        heading="Let's Build Together"
+      >
+        <ExampleContent1 />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Quality"
+        heading="Never compromise."
+      >
+        <ExampleContent2 />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Modern"
+        heading="Dress for the best."
+      >
+        <ExampleContent3 />
+      </TextParallaxContent>
+    </div>
+  );
+};
+
+
+
+
+
+// Image Heading Starts
+
+
+
+
+
+const IMG_PADDING = 12;
+
+const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+  return (
+    <div
+      style={{
+        paddingLeft: IMG_PADDING,
+        paddingRight: IMG_PADDING,
+      }}
+      data-aos="fade-up"
+    >
+      <div className="relative h-screen ">
+        <StickyImage imgUrl={imgUrl} />
+        <OverlayCopy heading={heading} subheading={subheading} />
+      </div>
+      {children}
+    </div>
+  );
+};
+
+
+
+
+// Image Heading Ends
+
+
+
+
+
+// Images Function Starts
+
+const StickyImage = ({ imgUrl }) => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["end end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        backgroundImage: `url(${imgUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        top: IMG_PADDING,
+        scale,
+      }}
+      ref={targetRef}
+      className="sticky z-0 overflow-hidden  rounded-3xl"
+    >
+      <motion.div
+        className="absolute inset-0 bg-neutral-950/70"
+        style={{
+          opacity,
+        }}
+      />
+    </motion.div>
+  );
+};
+
+// Images Function Ends
+
+
+
+
+
+
+const OverlayCopy = ({ subheading, heading }) => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        y,
+        opacity,
+      }}
+      ref={targetRef}
+      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white "
+    >
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+        {subheading}
+      </p>
+      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+    </motion.div>
+  );
+};
+
+
+
+
+
+// Content Starts
+
+const ExampleContent1 = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 ">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
+      Additional content explaining the above card here
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl text-zinc-500">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+        maiores voluptate est ut saepe accusantium maxime doloremque nulla
+        consectetur possimus.
+      </p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        reiciendis blanditiis aliquam aut fugit sint.
+      </p>
+    </div>
+  </div>
+);
+
+const ExampleContent2 = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
+      Additional content explaining the above card here
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+        maiores voluptate est ut saepe accusantium maxime doloremque nulla
+        consectetur possimus.
+      </p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        reiciendis blanditiis aliquam aut fugit sint.
+      </p>
+    </div>
+  </div>
+);
+
+const ExampleContent3 = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
+      Additional content explaining the above card here
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+        maiores voluptate est ut saepe accusantium maxime doloremque nulla
+        consectetur possimus.
+      </p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        reiciendis blanditiis aliquam aut fugit sint.
+      </p>
+    </div>
+  </div>
+);
+
+// Content Ends
+
+
+
+
+
+// TEXTPARALLAX ENDS
+
+
+
+
+
+// Info Ends----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// Footer Starts-----------------------------------------------------------------------------------------------------------------------------
+
+const Footer = () => {
+  return (
+    <footer
+      id="AiFooter"
+      className="relative h-full w-full pt-[10rem] content-center bg-[#000029] pb-6 transition delay-500"
+    >
+      <div className="container mx-auto px-4" data-aos="fade-up">
+        <div className="info-wrapper flex flex-wrap text-left lg:text-left">
+          <div className="w-full lg:w-6/12 px-4">
+            <h4 className="text-3xl fonat-semibold text-white">Contact Us</h4>
+            <h5 className="text-lg mt-0 mb-2 text-white">
+              Intellectual OneApi's Students Club
+            </h5>
+            <div className="mt-6 lg:mb-0 mb-6">
+              <button
+                className=" text-lightBlue-400 font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <a href="">
+                  <img
+                    src={twitter}
+                    alt=""
+                    className="rounded-full hover:scale-125"
+                  />
+                </a>
+              </button>
+              <button
+                className="text-lightBlue-600  font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <a href="">
+                  <img src={instagram} alt="" className="w-8 hover:scale-125" />
+                </a>
+              </button>
+              <button
+                className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <a href="">
+                  <img src="" alt="" />
+                </a>
+              </button>
+              <button
+                className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <a href="">
+                  <img src="" alt="" />
+                </a>
+              </button>
+            </div>
+          </div>
+          <div className="w-full lg:w-6/12 px-4">
+            <div className="links-container flex flex-wrap items-top mb-6">
+              <div className="w-full lg:w-4/12 px-4 ml-auto">
+                <span className="block uppercase text-white text-sm font-semibold mb-2">
+                  Useful Links
+                </span>
+                <ul className="list-unstyled">
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      One
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Two
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Three
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Four
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full lg:w-4/12 px-4">
+                <span className="block uppercase text-white text-sm font-semibold mb-2">
+                  Other Resources
+                </span>
+                <ul className="list-unstyled">
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      One
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Two
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Three
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
+                      href=""
+                    >
+                      Four
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="my-6 border-blueGray-300"></hr>
+        <div className="flex flex-wrap items-center md:justify-between justify-center">
+          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div className="text-sm text-white font-semibold py-1">
+                Developed By
+                <a
+                  href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
+                  className="text-white hover:text-blue-600"
+                  target="_blank"
+                >
+                  {" "}
+                  Aditya Shrivastav
+                </a>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+// Footer Ends-----------------------------------------------------------------------------------------------------------------------------

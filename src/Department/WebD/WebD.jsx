@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import { FiArrowUpRight, FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useLocation } from "react-router-dom";
 // import Sky from "../../Assets/Sky.jpg";
 import IOSC from "../../Assets/IOSC.jpg";
@@ -27,6 +29,18 @@ const WebD = () => {
     // Scroll to the top whenever the component mounts
     window.scrollTo(0, 0);
   }, []);
+
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duration of the animation
+      easing: "ease-in-out", // easing of the animation
+      once: false, // animation occurs only once
+    });
+  }, []);
+
+
+  
 
   return (
     <>
@@ -47,7 +61,7 @@ const WebD = () => {
         </useLenis>
       </div>
 
-      <div className="h-full w-full bg-zinc-950">
+      <div className="h-full w-full bg-zinc-950 ">
         <section className="grid h-full w-full text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
           <FlipLink href="#" className="w-[8rem]">
             Twitter
@@ -64,6 +78,10 @@ const WebD = () => {
 };
 
 export default WebD;
+
+
+
+
 
 const Nav = () => {
   return (
@@ -100,7 +118,7 @@ const Hero = () => {
 
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
+      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-bg-zinc-950 to-bg-zinc-950" />
     </div>
   );
 };
@@ -126,7 +144,7 @@ const CenterImage = () => {
 
   return (
     <motion.div
-      className="sticky top-0 h-screen w-full "
+      className="sticky top-0 h-screen w-full"
       style={{
         clipPath,
         backgroundSize,
@@ -141,34 +159,34 @@ const CenterImage = () => {
 
 const ParallaxImages = () => {
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-[200px] ">
+    <div className="mx-auto max-w-5xl px-4 pt-[200px] bg-zinc-950">
       <ParallaxImg
         src={Project2}
         alt="And example of a space launch"
         start={-200}
         end={200}
-        className="w-1/3"
+        className="w-1/3 rounded-2xl"
       />
       <ParallaxImg
         src={Project1}
         alt="An example of a space launch"
         start={200}
         end={-250}
-        className="mx-auto w-2/3"
+        className="mx-auto w-2/3 rounded-2xl"
       />
       <ParallaxImg
         src={Project3}
         alt="Orbiting satellite"
         start={-200}
         end={200}
-        className="ml-auto w-1/3"
+        className="ml-auto w-1/3 rounded-2xl"
       />
       <ParallaxImg
         src={Project4}
         alt="Orbiting satellite"
         start={0}
         end={-500}
-        className="ml-24 w-5/12"
+        className="ml-24 w-5/12 rounded-2xl"
       />
     </div>
   );
@@ -198,6 +216,12 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
     />
   );
 };
+
+
+
+
+
+
 
 // Footer Links Start
 
@@ -267,11 +291,18 @@ const FlipLink = ({ children, href }) => {
 
 // Footer Links End
 
+
+
+
+
+
+
+
 // Project Starts
 
 const HoverImageLinks = () => {
   return (
-    <section id="Projects" className="bg-neutral-950 h-[70rem] p-4 md:p-8">
+    <section id="Projects" className=" bg-zinc-950 h-[60rem] md:p-20">
       <div className="mx-auto max-w-5xl">
         <Link
           heading="Project-1"
@@ -297,12 +328,12 @@ const HoverImageLinks = () => {
           imgSrc={Project4}
           href="#"
         />
-        <Link
+        {/* <Link
           heading="Project-5"
           subheading="Incase you're bored"
           imgSrc="/imgs/random/10.jpg"
           href="#"
-        />
+        /> */}
       </div>
     </section>
   );
@@ -344,6 +375,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       initial="initial"
       whileHover="whileHover"
       className="group relative flex  items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+      data-aos="fade-up"
+
     >
       <div>
         <motion.span
@@ -416,6 +449,13 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 
 // Project Ends
 
+
+
+
+
+
+
+
 // TEXTPARALLAX STARTS
 
 const TextParallaxContentExample = () => {
@@ -457,8 +497,9 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
         paddingLeft: IMG_PADDING,
         paddingRight: IMG_PADDING,
       }}
+      data-aos="fade-up"
     >
-      <div className="relative h-screen ">
+      <div className="relative h-screen">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>

@@ -165,20 +165,16 @@ const App = () => {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-white font-semibold py-1">
-                Copyright © <span id="get-current-year">2024</span>
+                Developed By
                 <a
-                  href=""
+                  href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
                   className="text-white hover:text-blue-600"
                   target="_blank"
                 >
                   {" "}
-                  Blah Blah Blah
+                  Aditya Shrivastav
                 </a>
-                <a
-                  href=""
-                  className="text-blueGray-500 hover:text-blueGray-800"
-                ></a>
-                .
+
               </div>
             </div>
           </div>
