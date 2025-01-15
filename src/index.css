@@ -6,9 +6,6 @@
     background-color: #000029;
 } */
 
-
-
-
 /* Responsive Footer Starts */
 
 /* @media screen and (min-width:800px) and (max-width:850px) {
@@ -17,212 +14,146 @@
     }
 } */
 
-
 @media screen and (min-width: 800px) and (max-width: 850px) {
-    .info-wrapper{
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .links-container{
-        flex-wrap: nowrap;
-    }
+  .info-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
-
+  .links-container {
+    flex-wrap: nowrap;
+  }
+}
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
+  .info-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
-    .info-wrapper{
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .links-container{
-        flex-wrap: nowrap;
-    }
+  .links-container {
+    flex-wrap: nowrap;
+  }
 }
-
-
-
 
 @media screen and (min-width: 600px) and (max-width: 640px) {
+  .info-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
-    .info-wrapper{
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .links-container{
-        flex-wrap: nowrap;
-    }
+  .links-container {
+    flex-wrap: nowrap;
+  }
 }
-
-
-
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    
-    .links-container{
-        flex-wrap: nowrap;
-    }
+  .links-container {
+    flex-wrap: nowrap;
+  }
 }
-
 
 /* Responsive Footer Ends */
 
-
-
-
-
-
-
-
-
 /* Responsive Home Starts */
-
-
-
-
 
 /* Initial state, positioned off-screen */
 .slide-out {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  
-  /* When the menu is open */
-  .slide-in {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  /* Smooth transition */
-  .transition-transform {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  }
-  
+  transform: translateX(100%);
+  opacity: 0;
+}
 
+/* When the menu is open */
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-
-
+/* Smooth transition */
+.transition-transform {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 
 .navbar-smooth {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ham-burger {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 320px) and (max-width: 468px) {
+  .ham-burger-button {
+    right: 18px;
   }
-  
-
-
-.ham-burger{
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-@media screen and (min-width:320px) and (max-width:468px) {
-    .ham-burger-button{
-        right: 18px;
-    }
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .soc-logo {
+    position: absolute;
+    left: 10px;
+  }
 }
-
-
-@media screen and (min-width:600px) and (max-width:768px) {
-    .soc-logo{
-        position: absolute;
-        left: 10px;
-    }
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  .soc-logo {
+    position: absolute;
+    left: 10px;
+  }
 }
-@media screen and (min-width:800px) and (max-width:850px) {
-    .soc-logo{
-        position: absolute;
-        left: 10px;
-    }
-}
-
 
 /* Responsive Home Ends */
 
-
-
-
-
-
-
-
-
 /* Responsive AI Starts */
-
-
-
-
 
 /* =============================================================================== */
 
-
-
-
-
 #AiNav {
-    /* Default height for large screens */
-    /* height: auto; */
-    height: 100dvh; /* Ensure it covers the full viewport on larger screens */
+  /* Default height for large screens */
+  height: 100dvh;
+}
+
+/* Mobile screens (320px - 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #AiNav {
+    height: 100vh;
   }
-  
-  /* Mobile screens (320px - 480px) */
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    #AiNav {
-      /* min-height: calc(100vh - 66px); Subtract bottom padding or address bar height */
-      height: 100dvh;
-      /* height: auto; */
-    }
-  
-    /* .ai-arrow-container {
+
+  /* .ai-arrow-container {
       position: absolute;
-      bottom: 0px; Adjust bottom padding to ensure arrow is visible
+      bottom: 1px;
     } */
-  
-    /* .ai-arrow-line {
+
+  /* .ai-arrow-line {
       position: absolute;
       bottom: -15.9px; 
     } */
+}
+
+/* Tablet screens (481px - 850px) */
+@media screen and (min-width: 481px) and (max-width: 850px) {
+  #AiNav {
+    /* min-height: calc(100vh - 56px); Similar adjustment for tablet devices */
+    height: 100dvh;
+    /* height: auto; */
   }
-  
 
-
-
-
-
-  /* Tablet screens (481px - 850px) */
-  @media screen and (min-width: 481px) and (max-width: 850px) {
-    #AiNav {
-      /* min-height: calc(100vh - 56px); Similar adjustment for tablet devices */
-      height: 100dvh;
-      /* height: auto; */
-    }
-  
-    /* .ai-arrow-container {
+  /* .ai-arrow-container {
       bottom: 10px;
     }
   
     .ai-arrow-line {
       bottom: 10px;
     } */
+}
+
+/* Larger screens (above 850px) */
+@media screen and (min-width: 851px) {
+  #AiNav {
+    /* height: auto; */
+    height: 100dvh;
   }
-  
 
-
-
-
-  /* Larger screens (above 850px) */
-  @media screen and (min-width: 851px) {
-    #AiNav {
-      /* height: auto; */
-      height: 100dvh;
-    }
-  
-    /* .ai-arrow-container {
+  /* .ai-arrow-container {
       position: absolute;
       bottom: 0.1px;
     }
@@ -231,302 +162,264 @@
       position: absolute;
       bottom: 0.1px;
     } */
-  }
-  
+}
 
-
-  /* .team-cards:hover{
+/* .team-cards:hover{
     transform: scale(1.1);
     transition: transform 0.6s;
     transform-style: preserve-3d;
   } */
 
-
-  @media screen and (min-width:800px) and (max-width:850px) {
-    .heading-container h1{
-      font-size: 4rem;
-    }
-
-    .team-cards{
-      height: 18rem;
-      width: 18rem;
-    }
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  .heading-container h1 {
+    font-size: 4rem;
   }
 
-  @media screen and (min-width:600px) and (max-width:768px) {
+  .team-cards {
+    height: 18rem;
+    width: 18rem;
+  }
+}
 
-    .heading-container h1{
-      font-size: 3.5rem;
-    }
-
-    .team-cards{
-      height: 16rem;
-      width: 16rem;
-    }
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .heading-container h1 {
+    font-size: 3.5rem;
   }
 
-  @media screen and (min-width:600px) and (max-width:650px) {
+  .team-cards {
+    height: 16rem;
+    width: 16rem;
+  }
+}
 
-    .team-card-container{
-      gap: 3rem;
-    }
+@media screen and (min-width: 600px) and (max-width: 650px) {
+  .team-card-container {
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px) {
+  .team-card-container {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #AiAbout {
+    padding-top: 0;
   }
 
-  @media screen and (min-width:650px) and (max-width:768px) {
-
-    .team-card-container{
-      gap: 4rem;
-    }
+  .main-container {
+    margin-top: 0;
   }
 
-
-
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-
-    #AiAbout{
-      padding-top: 0;
-    }
-
-    .main-container{
-      margin-top: 0;
-    }
-
-    .team-and-heading-cont{
-      gap: 4rem;
-      margin-top: 0;
-    }
-
-    .team-card-container{
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    .heading-container h1{
-      font-size: 2.5rem;
-    }
-
-    .team-cards{
-      height: 13rem;
-      width: 13rem;
-    }
+  .team-and-heading-cont {
+    gap: 4rem;
+    margin-top: 0;
   }
 
-
-
-
-
-  /* Team Member Cards */
-
-
-
-
-
-
-
-  @media screen and (min-width: 1024px) and (max-width:1200px) {
-
-    .card{
-      height: 25rem;
-      width: 20rem;
-    }
-    .card:hover{
-      transform: scale(1.08);
-    }
-  
-    .flip-card-event-heading{
-      font-size: 2.3rem;
-    }
-    .flip-card-event-info{
-      font-size: 1.2rem;
-    }
-  
-    .event-wrapper{
-      gap: 4rem;
-    }
-  
+  .team-card-container {
+    flex-direction: column;
+    gap: 3rem;
   }
-  
-  
-  
-  @media screen and (min-width: 800px) and (max-width:850px){
-    .event-wrapper{
-      margin: 4rem 1.3rem;
-      gap: 4rem;
-    } 
-  
-    .card{
-      height: 22rem;
-      width: 17rem;
-    }
-  
-    .flip-card-back{
-      gap: 1rem;
-    }
-  
-    .flip-card-back p{
-      font-size: 0.9rem;
-    }
-  
-    .flip-card-h1{
-      font-size: 1.5rem;
-    }
-  
-  }
-  
-  
-  
-  
-  
-  @media screen and (min-width: 600px) and (max-width:768px) {
-  
-    .event-wrapper{
-      margin: 4rem 1.3rem;
-      gap: 4rem;
-    } 
-  
-    .flip-card-event-info-container{
-      gap: 3rem;
-    } 
-  
-    .card{
-      height: 22rem;
-      width: 17rem;
-    }
 
-    .flip-card-front{
-      gap: 1rem;
-    }
-    .flip-card-back{
-      gap: 1rem;
-    }
-  
-    .flip-card-back p{
-      font-size: 0.9rem;
-    }
-  
-    .flip-card-p{
-      font-size: 1rem;
-    }
-    .flip-card-h1{
-      font-size: 1.5rem;
-    }
-
-    .team-member{
-      flex-direction: column;
-      gap: 8rem;
-    }
-  
+  .heading-container h1 {
+    font-size: 2.5rem;
   }
-  
-  
-  
-  
-  @media screen and (min-width: 320px) and (max-width: 480px){
-  
-    .card:hover{
-      transform: scale(1.05);
-    }
-    
-    .team-member{
-      flex-direction: column;
-    }
-  
-    .card{
-      height: 20rem;
-      width: 17rem;
-    }
-  
-    .event-wrapper2{
-      flex-direction: column-reverse;
-    }
-  
-    .flip-card-front{
-      gap: 1rem;
-    }
-    .flip-card-back{
-      gap: 1rem;
-    }
-  
-    .flip-card-back p{
-      font-size: 0.9rem;
-    }
-  
-  
-  
-    /* .flip-card-p{
+
+  .team-cards {
+    height: 13rem;
+    width: 13rem;
+  }
+}
+
+/* Team Member Cards */
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .card {
+    height: 25rem;
+    width: 20rem;
+  }
+  .card:hover {
+    transform: scale(1.08);
+  }
+
+  .flip-card-event-heading {
+    font-size: 2.3rem;
+  }
+  .flip-card-event-info {
+    font-size: 1.2rem;
+  }
+
+  .event-wrapper {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  .event-wrapper {
+    margin: 4rem 1.3rem;
+    gap: 4rem;
+  }
+
+  .card {
+    height: 22rem;
+    width: 17rem;
+  }
+
+  .flip-card-back {
+    gap: 1rem;
+  }
+
+  .flip-card-back p {
+    font-size: 0.9rem;
+  }
+
+  .flip-card-h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .event-wrapper {
+    margin: 4rem 1.3rem;
+    gap: 4rem;
+  }
+
+  .flip-card-event-info-container {
+    gap: 3rem;
+  }
+
+  .card {
+    height: 22rem;
+    width: 17rem;
+  }
+
+  .flip-card-front {
+    gap: 1rem;
+  }
+  .flip-card-back {
+    gap: 1rem;
+  }
+
+  .flip-card-back p {
+    font-size: 0.9rem;
+  }
+
+  .flip-card-p {
+    font-size: 1rem;
+  }
+  .flip-card-h1 {
+    font-size: 1.5rem;
+  }
+
+  .team-member {
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .team-member {
+    flex-direction: column;
+  }
+
+  .card {
+    height: 20rem;
+    width: 17rem;
+  }
+
+  .event-wrapper2 {
+    flex-direction: column-reverse;
+  }
+
+  .flip-card-front {
+    gap: 1rem;
+  }
+  .flip-card-back {
+    gap: 1rem;
+  }
+
+  .flip-card-back p {
+    font-size: 0.9rem;
+  }
+
+  /* .flip-card-p{
       font-size: 1rem;
     }
     .flip-card-h1{
       font-size: 1.5rem;
     } */
-  }
-
-
-
-
-
-
-
+}
 
 /* =============================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* General styles for the mobile menu */
 .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Initially hidden off-screen to the right */
-    width: 50%; /* Adjust width as needed */
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glass effect */
-    transition: right 0.4s ease-in-out; /* Smooth slide-in transition */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    z-index: 999; /* Ensure it's on top */
-  }
-  
-  /* When the menu is open, slide it in from the right */
-  .mobile-menu.open {
-    right: 0; /* Menu slides in from the right */
-  }
-  
-  /* Close button for mobile menu */
-  .mobile-menu .close-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem; /* Change the close button position */
-    cursor: pointer;
-  }
-  
-  
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hidden off-screen to the right */
+  width: 50%; /* Adjust width as needed */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  transition: right 0.4s ease-in-out; /* Smooth slide-in transition */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 999; /* Ensure it's on top */
+}
+
+/* When the menu is open, slide it in from the right */
+.mobile-menu.open {
+  right: 0; /* Menu slides in from the right */
+}
+
+/* Close button for mobile menu */
+.mobile-menu .close-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem; /* Change the close button position */
+  cursor: pointer;
+}
+
 /* Glass effect background for mobile menu */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.2); /* Glass effect background */
-    backdrop-filter: blur(10px); /* Apply blur for glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Optional shadow for depth */
-    border-radius: 10px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.2); /* Glass effect background */
+  backdrop-filter: blur(10px); /* Apply blur for glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Optional shadow for depth */
+  border-radius: 10px; /* Rounded corners */
 }
-  
-
 
 /* Responsive AI Ends */
+
+
+
+
+/* RESPONSIVE WEBD Starts */
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #Projects {
+    height: 40rem;
+    padding-top: 5rem;
+    margin-bottom: 6rem;
+    /* position: relative;
+    top: 5rem; */
+
+  }
+
+}
+
+
+
+
+/* RESPONSIVE WEBD Ends */

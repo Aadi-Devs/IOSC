@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
+import styles from "../bubble.module.css";
 import { Link } from "react-router-dom";
 import Iosclogo from "../Assets/website background.png";
-import videoSrc from "../Assets/Nature.mp4";
+// import videoSrc from "../Assets/IOSC-Background-Original.mp4";
+import videoSrc from "../Assets/IOSC-Background-Compressed.mp4";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -55,9 +57,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-screen w-full relative overflow-hidden">
+      <div className="h-screen w-full relative overflow-hidden flex flex-col">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-[0rem] left-0 w-full h-full object-cover object-center z-[-1]"
           src={videoSrc}
           autoPlay
           loop
@@ -67,7 +69,8 @@ const Home = () => {
             willChange: "transform", // Optimize for better performance
           }}
         />
-        <div className="relative bg-opacity-40 backdrop-blur-md bg-transparent h-[5.5rem]">
+
+        <div className="relative  backdrop-blur-md bg-transparent h-[5rem]">
           <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
             <div className="container mx-auto flex items-center h-20">
               <a href="" className="soc-logo flex items-center justify-center">
@@ -98,28 +101,28 @@ const Home = () => {
                 className={`navBar hidden custom:contents bg-opacity-40 backdrop-blur-md font-semibold text-base lg:text-lg`}
               >
                 <ul className="lists-container mx-auto flex pr-[7rem]">
-                  <li className="list-items p-5 xl:p-8 active hover:text-blue-600">
+                  <li className="list-items p-5 xl:p-8 active hover:text-[#000029]">
                     <a href="">
                       <span>Home</span>
                     </a>
                   </li>
-                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
+                  <Link className="p-5 xl:p-8 hover:text-[#000029]" to="/team">
                     <span>Team</span>
                   </Link>
                   <Link
-                    className="p-5 xl:p-8 hover:text-blue-600"
+                    className="p-5 xl:p-8 hover:text-[#000029]"
                     onClick={() => scrollToElement("Departments", 1500)}
                   >
                     <span>Departments</span>
                   </Link>
                   <Link
-                    className="p-5 xl:p-8 hover:text-blue-600"
+                    className="p-5 xl:p-8 hover:text-[#000029]"
                     onClick={() => scrollToElement("Events", 1000)}
                   >
                     <span>Events</span>
                   </Link>
                   <Link onClick={() => scrollToElement("Footer", 1800)}>
-                    <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-full border-2 border-blue-300 transition-colors duration-700 hover:text-white hover:bg-blue-400 hover:border-black">
+                    <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-full border-2 border-indigo-300 transition-colors duration-700 hover:text-white hover:bg-[#000029]  hover:border-black">
                       Contact Us
                     </button>
                   </Link>
@@ -161,12 +164,30 @@ const Home = () => {
             </div>
           </header>
         </div>
+        <div className="absolute top-[15rem] h-[15rem] w-full flex flex-col items-center justify-center bg-transparent">
+          <h1 className="text-[8rem] text-white font-bold font-serif">
+            IOSC-BVP
+          </h1>
+          <BubbleText />
+        </div>
       </div>
     </>
   );
 };
 
 export default Home;
+
+const BubbleText = () => {
+  return (
+    <h2 className="text-center text-5xl font-thin text-indigo-300">
+      {"Intellectual One Api Students Club".split("").map((child, idx) => (
+        <span className={styles.hoverText} key={idx}>
+          {child}
+        </span>
+      ))}
+    </h2>
+  );
+};
 
 // import React, { useEffect, useState } from "react";
 // import "../index.css";
@@ -328,6 +349,5 @@ export default Home;
 // };
 
 // export default Home;
-
 
 // dc:f5:05:ed:0f:ef

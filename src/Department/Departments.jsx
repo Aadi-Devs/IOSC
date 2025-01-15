@@ -37,9 +37,9 @@ const Example = () => {
         <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
           <TiltCard imageSrc={WebD} route="/WebD" />
         </div>
-        <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="400">
+        {/* <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="400">
           <TiltCard imageSrc={IOT} route="/IOT" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

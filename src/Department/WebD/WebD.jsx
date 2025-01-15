@@ -19,14 +19,15 @@ import Project1 from "../../Assets/Project-1.png";
 import Project2 from "../../Assets/Project-2.png";
 import Project3 from "../../Assets/Project-3.png";
 import Project4 from "../../Assets/Project-4.png";
+import "../../index.css";
 // import { Lenis, useLenis } from '@studio-freight/react-lenis';
 // import { SiSpacex } from "react-icons/si";
 
 const WebD = () => {
   // const location = useLocation();
 
+  // Scroll to the top whenever the component mounts
   useEffect(() => {
-    // Scroll to the top whenever the component mounts
     window.scrollTo(0, 0);
   }, []);
 
@@ -63,7 +64,7 @@ const WebD = () => {
 
       <div className="h-full w-full bg-zinc-950 ">
         <section className="grid h-full w-full text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
-          <FlipLink href="#" className="w-[8rem]">
+          <FlipLink href="#" className="w-[8rem]" >
             Twitter
           </FlipLink>
           <FlipLink href="#">Linkedin</FlipLink>
@@ -118,7 +119,7 @@ const Hero = () => {
 
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-bg-zinc-950 to-bg-zinc-950" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-bg-zinc-950 to-bg-zinc-950" /> */}
     </div>
   );
 };
@@ -238,6 +239,7 @@ const FlipLink = ({ children, href }) => {
       style={{
         lineHeight: 0.9,
       }}
+      // data-aos="fade-up."
     >
       <div>
         {children.split("").map((l, i) => (
@@ -302,7 +304,7 @@ const FlipLink = ({ children, href }) => {
 
 const HoverImageLinks = () => {
   return (
-    <section id="Projects" className=" bg-zinc-950 h-[60rem] md:p-20">
+    <section id="Projects" className=" bg-zinc-950 h-[60rem] md:p-20" >
       <div className="mx-auto max-w-5xl">
         <Link
           heading="Project-1"

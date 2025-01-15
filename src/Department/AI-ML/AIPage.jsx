@@ -155,7 +155,7 @@ const Nav = () => {
       </div>
 
       {/* Animated arrow at the bottom */}
-      <div className="h-[50px] absolute w-full flex flex-col items-center justify-end bottom-[0.1px]">
+      {/* <div className="h-[50px] absolute w-full flex flex-col items-center justify-end bottom-[0.1px]">
         <div
           onClick={() => {
             document.getElementById("AiProjects")?.scrollIntoView({
@@ -180,7 +180,7 @@ const Nav = () => {
           </svg>
         </div>
         <div className="ai-arrow-line absolute flex justify-center w-full bg-white h-[20px]"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
