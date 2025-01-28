@@ -86,6 +86,15 @@
   .ham-burger-button {
     right: 18px;
   }
+
+  .Home_Hero_Section{
+    font-size: 2.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .Home_Sub_Heading{
+    font-size: 2.3rem;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -93,13 +102,42 @@
     position: absolute;
     left: 10px;
   }
+
+  .Home_Hero_Section{
+    font-size: 6rem;
+    margin-top: 11rem;
+    margin-bottom: 1.2rem;
+
+  }
+
+  .Home_Sub_Heading{
+    font-size: 4rem;
+  }
+
 }
 @media screen and (min-width: 800px) and (max-width: 850px) {
   .soc-logo {
     position: absolute;
     left: 10px;
   }
+
+
+  .Home_Hero_Section{
+    font-size: 7rem;
+    margin-top: 18rem;
+    margin-bottom: 1.2rem;
+
+  }
+
+  .Home_Sub_Heading{
+    font-size: 5rem;
+  }
+
+
 }
+
+
+
 
 /* Responsive Home Ends */
 

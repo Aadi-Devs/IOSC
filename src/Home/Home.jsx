@@ -165,7 +165,7 @@ const Home = () => {
           </header>
         </div>
         <div className="absolute top-[15rem] h-[15rem] w-full flex flex-col items-center justify-center bg-transparent">
-          <h1 className="text-[8rem] text-white font-bold font-serif">
+          <h1 className="Home_Hero_Section text-[8rem] text-white font-bold font-serif">
             IOSC-BVP
           </h1>
           <BubbleText />
@@ -179,7 +179,7 @@ export default Home;
 
 const BubbleText = () => {
   return (
-    <h2 className="text-center text-5xl font-thin text-indigo-300">
+    <h2 className="Home_Sub_Heading text-center text-5xl font-thin text-indigo-300">
       {"Intellectual One Api Students Club".split("").map((child, idx) => (
         <span className={styles.hoverText} key={idx}>
           {child}
