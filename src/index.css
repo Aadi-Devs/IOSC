@@ -88,12 +88,12 @@
   }
 
   .Home_Hero_Section{
-    font-size: 2.7rem;
-    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    /* margin-bottom: 1.5rem; */
   }
 
   .Home_Sub_Heading{
-    font-size: 2.3rem;
+    font-size: 3rem;
   }
 }
 
