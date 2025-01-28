@@ -6,6 +6,10 @@ import "./Cards.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Vite from "../../Assets/vite.svg";
+import TechGenesisFront from "../../Assets/TechGenesisFront.jpg";
+import TechGenesisBack from "../../Assets/TechGenesisBack.jpg";
+import IdeateFront from "../../Assets/IdeateFront.jpg";
+import IdeateBack  from "../../Assets/IdeateBack.jpg";
 
 const Cards = () => {
   // Card States
@@ -47,8 +51,8 @@ const Cards = () => {
               >
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
-                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${TechGenesisFront})` }}
                   >
                     <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
                       Techgenesis 2023
@@ -61,8 +65,8 @@ const Cards = () => {
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${TechGenesisBack})` }}
                   >
                     <p className="text-center text-xl">
                       "So many participants, along with mentorship from tech
@@ -119,8 +123,8 @@ const Cards = () => {
               >
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
-                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${IdeateFront})` }}
                   >
                     <h1 className="flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
                       Ideate
@@ -134,8 +138,8 @@ const Cards = () => {
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${IdeateBack})` }}
                   >
                     <p className="text-center text-xl">
                       "High participation with a collaborative and competitive
@@ -165,7 +169,7 @@ const Cards = () => {
               >
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
-                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <h1 className="flip-card-h1 text-center text-2xl font-bold/ mt-[1.2rem]">
@@ -180,7 +184,7 @@ const Cards = () => {
                   </div>
 
                   <div
-                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover bg-center border-[1px] text-white p-4 rounded-2xl cursor-pointer"
                     style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <p className="text-center text-xl">

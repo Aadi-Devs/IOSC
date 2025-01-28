@@ -3,8 +3,8 @@ import "../index.css";
 import styles from "../bubble.module.css";
 import { Link } from "react-router-dom";
 import Iosclogo from "../Assets/website background.png";
-// import videoSrc from "../Assets/IOSC-Background-Original.mp4";
 import videoSrc from "../Assets/IOSC-Background-Compressed.mp4";
+
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -101,25 +101,25 @@ const Home = () => {
                 className={`navBar hidden custom:contents bg-opacity-40 backdrop-blur-md font-semibold text-base lg:text-lg`}
               >
                 <ul className="lists-container mx-auto flex pr-[7rem]">
-                  <li className="list-items p-5 xl:p-8 active hover:text-[#000029]">
+                  <li className="list-items p-5 xl:p-8 active hover:text-indigo-300">
                     <a href="">
                       <span>Home</span>
                     </a>
                   </li>
-                  <Link className="p-5 xl:p-8 hover:text-[#000029]" to="/team">
-                    <span>Team</span>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-indigo-300"
+                    onClick={() => scrollToElement("Events", 1000)}
+                  >
+                    <span>Events</span>
                   </Link>
                   <Link
-                    className="p-5 xl:p-8 hover:text-[#000029]"
+                    className="p-5 xl:p-8 hover:text-indigo-300"
                     onClick={() => scrollToElement("Departments", 1500)}
                   >
                     <span>Departments</span>
                   </Link>
-                  <Link
-                    className="p-5 xl:p-8 hover:text-[#000029]"
-                    onClick={() => scrollToElement("Events", 1000)}
-                  >
-                    <span>Events</span>
+                  <Link className="p-5 xl:p-8 hover:text-indigo-300" to="/team">
+                    <span>Team</span>
                   </Link>
                   <Link onClick={() => scrollToElement("Footer", 1800)}>
                     <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-full border-2 border-indigo-300 transition-colors duration-700 hover:text-white hover:bg-[#000029]  hover:border-black">
@@ -139,8 +139,11 @@ const Home = () => {
                   <li className="list-items p-5 xl:p-8 hover:text-blue-600">
                     <a href="">Home</a>
                   </li>
-                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
-                    Team
+                  <Link
+                    className="p-5 xl:p-8 hover:text-blue-600"
+                    onClick={() => scrollToElement("Events", 1000)}
+                  >
+                    Events
                   </Link>
                   <Link
                     className="p-5 xl:p-8 hover:text-blue-600"
@@ -148,11 +151,8 @@ const Home = () => {
                   >
                     Departments
                   </Link>
-                  <Link
-                    className="p-5 xl:p-8 hover:text-blue-600"
-                    onClick={() => scrollToElement("Events", 1000)}
-                  >
-                    Events
+                  <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
+                    Team
                   </Link>
                   <Link onClick={() => scrollToElement("Footer", 1800)}>
                     <button className="bg-transparent text-blue-200 h-10 w-32 rounded-full border-2 border-blue-300 transition-colors duration-700 hover:text-white hover:bg-blue-400 hover:border-black mt-6">
@@ -188,6 +188,19 @@ const BubbleText = () => {
     </h2>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import React, { useEffect, useState } from "react";
 // import "../index.css";
