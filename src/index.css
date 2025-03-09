@@ -157,15 +157,10 @@
     height: 100vh;
   }
 
-  /* .ai-arrow-container {
-      position: absolute;
-      bottom: 1px;
-    } */
+  .ham-burger{
+    position: absolute;
+  }
 
-  /* .ai-arrow-line {
-      position: absolute;
-      bottom: -15.9px; 
-    } */
 }
 
 /* Tablet screens (481px - 850px) */

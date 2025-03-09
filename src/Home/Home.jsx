@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
-import styles from "../bubble.module.css";
+// import styles from "../bubble.module.css";
 import { Link } from "react-router-dom";
 import Iosclogo from "../Assets/website background.png";
-import videoSrc from "../Assets/IOSC-Background-Compressed.mp4";
-
+import HomeBackground from "../Assets/home_video.mp4";
+import HomeBackgroundMobile from "../Assets/home_mobile_bg.jpg";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -55,12 +55,29 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
+
+  // Change to img for mobile devics
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize); // Listen for window resize
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
+  }, []);
+
+
   return (
     <>
       <div className="h-screen w-full relative overflow-hidden flex flex-col">
-        <video
-          className="absolute top-[0rem] left-0 w-full h-full object-cover object-center z-[-1]"
-          src={videoSrc}
+        {/* <video
+          className="absolute top-[4rem] left-0 w-full h-full object-cover object-center  z-[-1]"
+          src={HomeBackground}
           autoPlay
           loop
           muted
@@ -68,9 +85,29 @@ const Home = () => {
             transform: `translateY(${scrollY * 0.5}px)`, // Adjust the parallax effect speed
             willChange: "transform", // Optimize for better performance
           }}
-        />
+        /> */}
 
-        <div className="relative  backdrop-blur-md bg-transparent h-[5rem]">
+        {isMobile ? (
+          <img
+            className="absolute top-[4rem] left-0 w-full h-full object-cover object-center z-[-1]"
+            src={HomeBackgroundMobile}
+            alt="Background"
+          />
+        ) : (
+          <video
+            className="absolute top-[4rem] left-0 w-full h-full object-cover object-center z-[-1]"
+            src={HomeBackground}
+            autoPlay
+            loop
+            muted
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`,
+              willChange: "transform",
+            }}
+          />
+        )}
+
+        <div className="relative  backdrop-blur-lg bg-[#000026]  h-[5rem]">
           <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
             <div className="container mx-auto flex items-center h-20">
               <a href="" className="soc-logo flex items-center justify-center">
@@ -133,7 +170,7 @@ const Home = () => {
               <div
                 className={`${
                   isOpen ? "slide-in" : "slide-out"
-                } w-[15rem] h-[21rem] ham-burger custom:hidden backdrop-blur-lg bg-opacity-40 absolute top-20 right-0 z-10 transition-transform duration-300`}
+                } w-[15rem] h-[20rem] ham-burger custom:hidden backdrop-blur-lg bg-[#000026] bg-opacity-40 absolute top-20 right-0 z-10 transition-transform duration-300`}
               >
                 <ul className="flex flex-col items-center bg-opacity-40 backdrop-blur-md">
                   <li className="list-items p-5 xl:p-8 hover:text-blue-600">
@@ -154,7 +191,7 @@ const Home = () => {
                   <Link className="p-5 xl:p-8 hover:text-blue-600" to="/team">
                     Team
                   </Link>
-                  <Link onClick={() => scrollToElement("Footer", 1800)}>
+                  <Link onClick={() => scrollToElement("Footer", 1800)} >
                     <button className="bg-transparent text-blue-200 h-10 w-32 rounded-full border-2 border-blue-300 transition-colors duration-700 hover:text-white hover:bg-blue-400 hover:border-black mt-6">
                       Contact Us
                     </button>
@@ -164,12 +201,12 @@ const Home = () => {
             </div>
           </header>
         </div>
-        <div className="absolute top-[15rem] h-[15rem] w-full flex flex-col items-center justify-center bg-transparent">
+        {/* <div className="absolute top-[15rem] h-[15rem] w-full flex flex-col items-center justify-center bg-transparent">
           <h1 className="Home_Hero_Section text-[8rem] text-white font-bold font-serif">
             IOSC-BVP
           </h1>
           <BubbleText />
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -177,30 +214,17 @@ const Home = () => {
 
 export default Home;
 
-const BubbleText = () => {
-  return (
-    <h2 className="Home_Sub_Heading text-center text-5xl font-thin text-indigo-300">
-      {"Intellectual One Api Students Club".split("").map((child, idx) => (
-        <span className={styles.hoverText} key={idx}>
-          {child}
-        </span>
-      ))}
-    </h2>
-  );
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const BubbleText = () => {
+//   return (
+//     <h2 className="Home_Sub_Heading text-center text-5xl font-thin text-indigo-300">
+//       {"Intellectual One Api Students Club".split("").map((child, idx) => (
+//         <span className={styles.hoverText} key={idx}>
+//           {child}
+//         </span>
+//       ))}
+//     </h2>
+//   );
+// };
 
 // import React, { useEffect, useState } from "react";
 // import "../index.css";

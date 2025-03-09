@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 import "./Departments.css";
 import AIML from "../Assets/AI-ML.jpg";
+// import AIML2 from "../Assets/AI-ML2.jpg";
+// import WebD2 from "../Assets/Web2.jpg";
 import WebD from "../Assets/Web.jpg";
 import IOT from "../Assets/IOT.png";
 import AOS from "aos";

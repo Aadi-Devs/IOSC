@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -13,13 +13,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useLocation } from "react-router-dom";
 // import Sky from "../../Assets/Sky.jpg";
-import IOSC from "../../Assets/IOSC.jpg";
+// import IOSC from "../../Assets/IOSC.jpg";
 import iosc1 from "../../Assets/iosc1.jpg";
 import Project1 from "../../Assets/Project-1.png";
 import Project2 from "../../Assets/Project-2.png";
 import Project3 from "../../Assets/Project-3.png";
 import Project4 from "../../Assets/Project-4.png";
 import "../../index.css";
+import Aditya from "../../Assets/team_images/Aditya.png";
+import Kashaan from "../../Assets/team_images/Kashaan_WebD.jpg";
 // import { Lenis, useLenis } from '@studio-freight/react-lenis';
 // import { SiSpacex } from "react-icons/si";
 
@@ -59,19 +61,16 @@ const WebD = () => {
           {/* <Schedule /> */}
           <HoverImageLinks />
           <TextParallaxContentExample />
+          <About />
         </useLenis>
       </div>
 
       <div className="h-full w-full bg-zinc-950 ">
         <section className="grid h-full w-full text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
-          <FlipLink href="#" className="w-[8rem]" >
-            Twitter
-          </FlipLink>
-          <FlipLink href="#">Linkedin</FlipLink>
-          <FlipLink href="#">Facebook</FlipLink>
-          <FlipLink href="https://www.instagram.com/iosc.bvcoe?igsh=bjc1dDBveXozZ3Js">
-            Instagram
-          </FlipLink>
+          <FlipLink href="mailto:iosc.bvcoe@gmail.com">Gmail</FlipLink>
+          <FlipLink href="https://x.com/iosc_bvcoe/status/1838946162931278156?s=46" className="w-[8rem]" >Twitter</FlipLink>
+          <FlipLink href="https://www.linkedin.com/company/iosc-bvcoe/">Linkedin</FlipLink>
+          <FlipLink href="https://www.instagram.com/iosc.bvcoe?igsh=bjc1dDBveXozZ3Js">Instagram</FlipLink>
         </section>
       </div>
     </>
@@ -235,7 +234,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block  overflow-hidden whitespace-nowrap text-2xl font-black uppercase sm:text-6xl md:text-7xl lg:text-8xl"
+      className="relative block  overflow-hidden whitespace-nowrap text-2xl font-black uppercase sm:text-8xl md:text-5xl lg:text-6xl"
       style={{
         lineHeight: 0.9,
       }}
@@ -581,18 +580,14 @@ const OverlayCopy = ({ subheading, heading }) => {
 const ExampleContent1 = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 ">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
-      Additional content explaining the above card here
+    IOSC-BVP WebD Workshop
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl text-zinc-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+      <p className="mb-4 text-xl md:text-2xl text-zinc-500">
+      The IOSC-BVP WebD department conducted a multi-day web development workshop. Day 1 covered HTML for structuring web pages, Day 2 introduced CSS for styling, and Day 3 focused on JavaScript for interactivity. Students also learned GitHub version control and live project hosting. 
       </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+      This hands-on experience provided a strong foundation in modern web development, equipping participants with the skills to build responsive and dynamic websites efficiently.
       </p>
     </div>
   </div>
@@ -641,3 +636,124 @@ const ExampleContent3 = () => (
 // Content Ends
 
 // TEXTPARALLAX ENDS
+
+
+
+
+
+const About = () => {
+  const [isFlipped1, setIsFlipped1] = useState(false);
+  const [isFlipped2, setIsFlipped2] = useState(false);
+
+  return (
+    <div
+      id="AiAbout"
+      className="flex items-center justify-center h-full w-full bg-zinc-950 p-4 overflow-x-hidden"
+    >
+      <div className="main-container flex flex-col items-center h-full w-full mt-7">
+        <div className="team-and-heading-cont flex flex-col items-center gap-[8rem] mt-5">
+          {/* Heading */}
+          <div className="heading-container" data-aos="fade-up">
+            <h1 className="text-7xl text-white font-semibold">Our Team</h1>
+          </div>
+
+          {/* Team Members */}
+          {/* <div className="team-card-container flex gap-[6rem]">
+            <div
+              className="flex flex-col items-center gap-6"
+              data-aos="fade-right"
+            >
+              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
+              <h3 className="text-white text-2xl">Priyanshu Satapathy</h3>
+            </div>
+
+            <div
+              className="flex flex-col items-center gap-6"
+              data-aos="fade-left"
+            >
+              <div className="team-cards h-[20rem] w-[20rem] bg-zinc-700 hover:scale-105 transition-all duration-700 rounded-2xl"></div>
+              <h3 className="text-white text-2xl">Bhumik Kumar</h3>
+            </div>
+          </div> */}
+
+          {/* Team Members */}
+          <div className="team-member flex gap-[6rem]">
+            {/* Member - 1 */}
+            <div className="flex flex-col gap-8" data-aos="fade-right">
+              <div
+                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
+                  isFlipped1 ? "flipped" : ""
+                }`}
+                onClick={() => setIsFlipped1(!isFlipped1)}
+              >
+                <div className="flip-card-inner w-[100%] h-[100%]">
+                  <div
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${Aditya})` }}
+                  >
+                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
+                      Click to Flip
+                    </h1>
+                  </div>
+
+                  <div
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <p className="text-center text-xl">
+                      "Aditya Shrivastav, WebD Head of IOSC-BVP, leads web development initiatives, organizes workshops, mentors students, and enhances the society’s digital presence, equipping aspiring developers with skills to build modern, responsive, and interactive websites."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-white text-center text-2xl">
+                  Aditya Shrivastav
+                </h1>
+              </div>
+            </div>
+
+            {/* Member - 2 */}
+            <div className="flex flex-col gap-8" data-aos="fade-left">
+              <div
+                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
+                  isFlipped2 ? "flipped" : ""
+                }`}
+                onClick={() => setIsFlipped2(!isFlipped2)}
+              >
+                <div className="flip-card-inner w-[100%] h-[100%]">
+                  <div
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{ backgroundImage: `url(${Kashaan})`, objectPosition: "center", objectFit: "cover" }}
+                  >
+                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
+                      Click to Flip
+                    </h1>
+                  </div>
+
+                  <div
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <p className="text-center text-xl">
+                      "Bhumik, head of IOSC-BVP's AI/ML department, inspires
+                      students through hands-on workshops and hackathons. He
+                      fosters ethical AI practices, multidisciplinary
+                      applications, and a collaborative environment, building a
+                      skilled, socially aware community."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-white text-center text-2xl">
+                  Kashaan
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

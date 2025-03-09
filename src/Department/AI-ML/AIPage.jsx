@@ -1,10 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import twitter from "../../Assets/icons8-twitter-48.png";
+import X from "../../Assets/X.png";
+import Gmail from "../../Assets/Gmail.svg";
 import instagram from "../../Assets/instagram.png";
+import Linkedin from "../../Assets/linkedin.png";
+import Iosclogo from "../../Assets/website background.png";
+import videoSrc from "../../Assets/Ai_BACKGROUND(2).mp4";
+import ai_event1 from "../../Assets/AI_Workshop.jpg";
+import ai_event2 from "../../Assets/intel_speaker_session.jpg";
+import Ai_project1 from "../../Assets/Ai_project1.jpg";
+import Ai_project2 from "../../Assets/Ai_project2.jpg";
+import Ai_project3 from "../../Assets/Ai_project3.png";
+import Ai_project4 from "../../Assets/Ai_project4.png";
+import Bhumik from "../../Assets/team_images/Bhumik.jpg";
+import Priyanshu from "../../Assets/team_images/Priyanshu_Ai.jpg";
 import "../../index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const AIPage = () => {
   // Scroll to the top when the component is mounted
@@ -23,7 +36,7 @@ const AIPage = () => {
 
   return (
     <>
-      <Nav />
+      <Home />
       <Projects />
       <TextParallaxContentExample />
       <About />
@@ -37,253 +50,395 @@ export default AIPage;
 
 // NavBar Starts-------------------------------------------------------------------------------------------------------------------------
 
-const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+// const Nav = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  // Handle window resize to adjust for screen width
+//   // Handle window resize to adjust for screen width
+//   useEffect(() => {
+//     const handleResize = () => setWindowWidth(window.innerWidth);
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   return (
+//     <div
+//       id="AiNav"
+//       className="mobile-screen bg-transparent bg-fixed w-full z-[1] h-screen"
+//       style={{
+//         backgroundColor: "pink",
+//       }}
+//     >
+//       {windowWidth < 850 ? (
+//         // Show hamburger icon for screens smaller than 850px
+//         <div className="flex justify-between w-full items-center fixed p-4 z-10">
+//           <div className="text-white">Logo</div>
+//           <div
+//             onClick={() => setIsOpen(!isOpen)}
+//             className="absolute right-5 cursor-pointer text-white"
+//           >
+//             {/* Hamburger Icon */}
+//             <svg
+//               xmlns="http://www.w3.org/2000/svg"
+//               className="h-8 w-8"
+//               fill="none"
+//               viewBox="0 0 24 24"
+//               stroke="currentColor"
+//             >
+//               <path
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth="2"
+//                 d="M4 6h16M4 12h16M4 18h16"
+//               />
+//             </svg>
+//           </div>
+//         </div>
+//       ) : (
+//         <SlideTabs />
+//         // <Home />
+//       )}
+
+//       {/* Mobile Menu */}
+//       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+//         <div
+//           onClick={() => setIsOpen(false)}
+//           className="self-end p-4 cursor-pointer"
+//         >
+//           {/* Close Icon */}
+//           <svg
+//             xmlns="http://www.w3.org/2000/svg"
+//             className="h-8 w-8"
+//             fill="none"
+//             viewBox="0 0 24 24"
+//             stroke="currentColor"
+//           >
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               strokeWidth="2"
+//               d="M6 18L18 6M6 6l12 12"
+//             />
+//           </svg>
+//         </div>
+//         <ul className="flex flex-col items-center space-y-4">
+//           <li
+//             className="cursor-pointer text-lg"
+//             onClick={() => {
+//               setIsOpen(false);
+//               document.getElementById("AiProjects")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             Projects
+//           </li>
+//           <li
+//             className="cursor-pointer text-lg"
+//             onClick={() => {
+//               setIsOpen(false);
+//               document.getElementById("AiAbout")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             Our Team
+//           </li>
+//           <li
+//             className="cursor-pointer text-lg"
+//             onClick={() => {
+//               setIsOpen(false);
+//               document.getElementById("AiParallax")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             Events
+//           </li>
+//           <li
+//             className="cursor-pointer text-lg"
+//             onClick={() => {
+//               document.getElementById("AiFooter")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             Contact Us
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+const Home = () => {
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  return (
-    <div
-      id="AiNav"
-      className="mobile-screen bg-transparent bg-fixed w-full z-[1] h-screen"
-      style={{
-        backgroundColor: "pink",
-      }}
-    >
-      {windowWidth < 850 ? (
-        // Show hamburger icon for screens smaller than 850px
-        <div className="flex justify-between w-full items-center fixed p-4 z-10">
-          <div className="text-white">Logo</div>
-          <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="absolute right-5 cursor-pointer text-white"
-          >
-            {/* Hamburger Icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </div>
-        </div>
-      ) : (
-        <SlideTabs />
-      )}
+  const scrollToElement = (elementId, duration) => {
+    const target = document.getElementById(elementId);
+    if (!target) return;
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <div
-          onClick={() => setIsOpen(false)}
-          className="self-end p-4 cursor-pointer"
-        >
-          {/* Close Icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </div>
-        <ul className="flex flex-col items-center space-y-4">
-          <li
-            className="cursor-pointer text-lg"
-            onClick={() => {
-              setIsOpen(false);
-              document.getElementById("AiProjects")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            Projects
-          </li>
-          <li
-            className="cursor-pointer text-lg"
-            onClick={() => {
-              setIsOpen(false);
-              document.getElementById("AiAbout")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            Our Team
-          </li>
-          <li
-            className="cursor-pointer text-lg"
-            onClick={() => {
-              setIsOpen(false);
-              document.getElementById("AiParallax")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            Events
-          </li>
-          <li
-            className="cursor-pointer text-lg"
-            onClick={() => {
-              document.getElementById("AiFooter")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            Contact Us
-          </li>
-        </ul>
-      </div>
+    const startPosition = window.pageYOffset;
+    const targetPosition = target.getBoundingClientRect().top + startPosition;
+    const startTime = performance.now();
 
-      {/* Animated arrow at the bottom */}
-      {/* <div className="h-[50px] absolute w-full flex flex-col items-center justify-end bottom-[0.1px]">
-        <div
-          onClick={() => {
-            document.getElementById("AiProjects")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="ai-arrow-container absolute flex items-center text-center bg-white w-[3rem] h-[3rem] rounded-full bottom-[0.1px] cursor-pointer"
-        >
-          <svg
-            className="w-8 h-8 text-purple-600 mx-auto animate-bounce cursor-pointer z-[10]"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </div>
-        <div className="ai-arrow-line absolute flex justify-center w-full bg-white h-[20px]"></div>
-      </div> */}
-    </div>
-  );
-};
+    const easeInOutQuad = (t) =>
+      t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-const SlideTabs = () => {
-  const [position, setPosition] = useState({
-    left: 0,
-    width: 0,
-    opacity: 0,
-  });
+    const animateScroll = (currentTime) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = easeInOutQuad(timeElapsed / duration);
+      const run = progress * (targetPosition - startPosition) + startPosition;
+      window.scrollTo(0, run);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        window.scrollTo(0, targetPosition);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
-      <div className="w-full h-[5rem] flex flex-col justify-center items-center">
-        <ul
-          onMouseLeave={() => {
-            setPosition((pv) => ({
-              ...pv,
-              opacity: 0,
-            }));
+      <div className="sm:h-screen h-[25rem] w-full bg-[#000029] relative overflow-hidden flex flex-col">
+        <video
+          className="absolute top-[2.5rem] sm:top-0 left-0 w-full h-full sm:object-cover sm:object-center z-[0]"
+          src={videoSrc}
+          autoPlay
+          loop
+          muted
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Adjust the parallax effect speed
+            willChange: "transform", // Optimize for better performance
           }}
-          className="absolute top-[0.1px]  w-max-[40rem] mx-auto flex flex-wrap justify-center items-center rounded-full border-[3px] border-[#000029] bg-transparent p-1"
-        >
-          <Tab setPosition={setPosition}>Home</Tab>
-          <div
-            onClick={() => {
-              document.getElementById("AiProjects")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            <Tab setPosition={setPosition}>Projects</Tab>
-          </div>
-          <div
-            onClick={() => {
-              document.getElementById("AiAbout")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            <Tab setPosition={setPosition}>Our Team</Tab>
-          </div>
-          <div
-            onClick={() => {
-              document.getElementById("AiParallax")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            <Tab setPosition={setPosition}>Events</Tab>
-          </div>
+        />
 
-          <div
-            onClick={() => {
-              document.getElementById("AiFooter")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            <Tab setPosition={setPosition}>Contact Us</Tab>
-          </div>
+        <div className="relative  backdrop-blur-md bg-[#000029]  h-[5rem]">
+          <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
+            <div className="container mx-auto flex items-center h-20">
+              <a href="" className="soc-logo flex items-center justify-center">
+                <img src={Iosclogo} alt="Logo" className="h-14" />
+              </a>
 
-          <Cursor position={position} />
-        </ul>
+              {/* Hamburger Icon for small screens */}
+              <button
+                className="ham-burger-button absolute right-5 custom:hidden flex items-center px-3 py-2 border rounded text-blue-400 border-blue-950 hover:text-blue-600 hover:border-blue-600"
+                onClick={handleToggle}
+              >
+                <svg
+                  className="fill-current h-6 w-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 6h18M3 12h18M3 18h18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+
+              {/* Nav Links for larger screens */}
+              <nav
+                className={`navBar hidden custom:contents bg-opacity-40 backdrop-blur-md font-semibold text-base lg:text-lg`}
+              >
+                <ul className="lists-container mx-auto flex pr-[7rem]">
+                  <li className="list-items p-5 xl:p-8 active hover:text-indigo-300">
+                    <a href="">
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-indigo-300"
+                    onClick={() => scrollToElement("AiProjects", 1000)}
+                  >
+                    <span>Projects</span>
+                  </Link>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-indigo-300"
+                    onClick={() => scrollToElement("AiParallax", 1500)}
+                  >
+                    <span>Events</span>
+                  </Link>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-indigo-300"
+                    onClick={() => scrollToElement("AiAbout", 1500)}
+                  >
+                    <span>Team</span>
+                  </Link>
+                  <Link onClick={() => scrollToElement("AiFooter", 1800)}>
+                    <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-full border-2 border-indigo-300 transition-colors duration-700 hover:text-white hover:bg-[#000029]  hover:border-black">
+                      Contact Us
+                    </button>
+                  </Link>
+                </ul>
+              </nav>
+
+              {/* Mobile Menu */}
+              <div
+                className={`${
+                  isOpen ? "slide-in" : "slide-out"
+                } w-[15rem] h-[20rem] ham-burger custom:hidden backdrop-blur-lg bg bg-opacity-40 relative top-20 right-0 z-[100] transition-transform duration-300 `}
+              >
+                <ul className="flex flex-col items-center bg-opacity-40 backdrop-blur-md bg-[#000029] z-[100]">
+                  <li className="list-items p-5 xl:p-8 hover:text-blue-600">
+                    <a href="">Home</a>
+                  </li>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-blue-600"
+                    onClick={() => scrollToElement("AiProjects", 1000)}
+                  >
+                    Projects
+                  </Link>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-blue-600"
+                    onClick={() => scrollToElement("AiParallax", 1500)}
+                  >
+                    Events
+                  </Link>
+                  <Link
+                    className="p-5 xl:p-8 hover:text-blue-600"
+                    onClick={() => scrollToElement("AiAbout", 1500)}
+                  >
+                    Team
+                  </Link>
+                  <Link onClick={() => scrollToElement("AiFooter", 1800)}>
+                    <button className="bg-transparent text-blue-200 h-10 w-32 rounded-full border-2 border-blue-300 transition-colors duration-700 hover:text-white hover:bg-blue-400 hover:border-black mt-6">
+                      Contact Us
+                    </button>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
       </div>
     </>
   );
 };
 
-const Tab = ({ children, setPosition }) => {
-  const ref = useRef(null);
+// const SlideTabs = () => {
+//   const [position, setPosition] = useState({
+//     left: 0,
+//     width: 0,
+//     opacity: 0,
+//   });
 
-  return (
-    <li
-      ref={ref}
-      onMouseEnter={() => {
-        if (!ref?.current) return;
+//   return (
+//     <>
+//       <div className="w-full h-[5rem] flex flex-col justify-center items-center">
+//         <ul
+//           onMouseLeave={() => {
+//             setPosition((pv) => ({
+//               ...pv,
+//               opacity: 0,
+//             }));
+//           }}
+//           className="absolute top-[0.1px]  w-max-[40rem] mx-auto flex flex-wrap justify-center items-center rounded-full border-[3px] border-[#000029] bg-transparent p-1"
+//         >
+//           <Tab setPosition={setPosition}>Home</Tab>
+//           <div
+//             onClick={() => {
+//               document.getElementById("AiProjects")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             <Tab setPosition={setPosition}>Projects</Tab>
+//           </div>
+//           <div
+//             onClick={() => {
+//               document.getElementById("AiAbout")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             <Tab setPosition={setPosition}>Our Team</Tab>
+//           </div>
+//           <div
+//             onClick={() => {
+//               document.getElementById("AiParallax")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             <Tab setPosition={setPosition}>Events</Tab>
+//           </div>
 
-        const { width } = ref.current.getBoundingClientRect();
+//           <div
+//             onClick={() => {
+//               document.getElementById("AiFooter")?.scrollIntoView({
+//                 behavior: "smooth",
+//               });
+//             }}
+//           >
+//             <Tab setPosition={setPosition}>Contact Us</Tab>
+//           </div>
 
-        setPosition({
-          left: ref.current.offsetLeft,
-          width,
-          opacity: 1,
-        });
-      }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
-    >
-      {children}
-    </li>
-  );
-};
+//           <Cursor position={position} />
+//         </ul>
+//       </div>
+//     </>
+//   );
+// };
 
-const Cursor = ({ position }) => {
-  return (
-    <motion.li
-      animate={{
-        ...position,
-      }}
-      className="absolute z-0 h-7 rounded-full bg-[#000029] md:h-12"
-    />
-  );
-};
+// const Tab = ({ children, setPosition }) => {
+//   const ref = useRef(null);
+
+//   return (
+//     <li
+//       ref={ref}
+//       onMouseEnter={() => {
+//         if (!ref?.current) return;
+
+//         const { width } = ref.current.getBoundingClientRect();
+
+//         setPosition({
+//           left: ref.current.offsetLeft,
+//           width,
+//           opacity: 1,
+//         });
+//       }}
+//       className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+//     >
+//       {children}
+//     </li>
+//   );
+// };
+
+// const Cursor = ({ position }) => {
+//   return (
+//     <motion.li
+//       animate={{
+//         ...position,
+//       }}
+//       className="absolute z-0 h-7 rounded-full bg-[#000029] md:h-12"
+//     />
+//   );
+// };
 
 // NavBar Ends-------------------------------------------------------------------------------------------------------------------
 
@@ -293,9 +448,9 @@ const Projects = () => {
   return (
     <div
       id="AiProjects"
-      className="min-h-screen w-full bg-fixed z-[1] bg-[#000029]"
+      className="min-h-screen w-full bg-fixed z-[0] bg-[#000029]"
     >
-      <div className="flex flex-col h-full px-4 md:px-6">
+      <div className="flex flex-col h-full px-4 md:px-6 z-0">
         <BouncyCardsFeatures />
       </div>
     </div>
@@ -317,10 +472,12 @@ const BouncyCardsFeatures = () => {
         data-aos="fade-down"
       >
         <BounceCardLeft className="col-span-12 md:col-span-4">
-          <CardTitle>Deep Fake Detection</CardTitle>
+          <img src={Ai_project1} alt="" />
+          <CardTitle className="z-10">AI Gym Trainer</CardTitle>
         </BounceCardLeft>
         <BounceCardRight className="col-span-12 md:col-span-8 overflow-x-hidden">
-          <CardTitle>AI Gym Trainer</CardTitle>
+          <img src={Ai_project3} alt="" />
+          <CardTitle>Eye Mouse</CardTitle>
         </BounceCardRight>
       </div>
       <div
@@ -328,10 +485,12 @@ const BouncyCardsFeatures = () => {
         data-aos="fade-up"
       >
         <BounceCardLeft className="col-span-12 md:col-span-8">
-          <CardTitle>AI Projectile Motion Calculator</CardTitle>
+          <img src={Ai_project4} alt="" />
+          <CardTitle>Auism Predictor</CardTitle>
         </BounceCardLeft>
         <BounceCardRight className="col-span-12 md:col-span-4 overflow-x-hidden">
-          <CardTitle>AI Ball Dodge Game</CardTitle>
+          <img src={Ai_project2} alt="" />
+          <CardTitle>Kreative AI Banner</CardTitle>
         </BounceCardRight>
       </div>
     </section>
@@ -343,7 +502,7 @@ const BounceCardLeft = ({ className, children }) => {
     <motion.div
       whileHover={{ scale: 0.9, rotate: "-5deg" }}
       whileTap={{ scale: 0.8 }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl p-8 ${className}`}
     >
       {children}
     </motion.div>
@@ -355,7 +514,7 @@ const BounceCardRight = ({ className, children }) => {
     <motion.div
       whileHover={{ scale: 0.9, rotate: "5deg" }}
       whileTap={{ scale: 0.8 }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl p-8 ${className}`}
     >
       {children}
     </motion.div>
@@ -364,7 +523,9 @@ const BounceCardRight = ({ className, children }) => {
 
 const CardTitle = ({ children }) => {
   return (
-    <h3 className="mx-auto text-center text-3xl font-semibold">{children}</h3>
+    <h3 className="mx-auto absolute bottom-10 text-center text-3xl font-semibold">
+      {children}
+    </h3>
   );
 };
 
@@ -422,45 +583,7 @@ const About = () => {
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
                     className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    // style={{ backgroundImage: `url(${Vite})` }}
-                  >
-                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
-                      Click to Flip
-                    </h1>
-                  </div>
-
-                  <div
-                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    // style={{ backgroundImage: `url(${Vite})` }}
-                  >
-                    <p className="text-center text-xl">
-                      "Priyanshu Satapathy, head of IOSC-BVP's AI/ML department,
-                      is a visionary leader fostering a collaborative community.
-                      Through projects, hackathons, and workshops, he empowers
-                      students to apply AI/ML to real-world challenges."
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-white text-center text-2xl">
-                  Priyanshu Satapathy
-                </h1>
-              </div>
-            </div>
-
-            {/* Member - 2 */}
-            <div className="flex flex-col gap-8" data-aos="fade-left">
-              <div
-                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
-                  isFlipped2 ? "flipped" : ""
-                }`}
-                onClick={() => setIsFlipped2(!isFlipped2)}
-              >
-                <div className="flip-card-inner w-[100%] h-[100%]">
-                  <div
-                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    // style={{ backgroundImage: `url(${Vite})` }}
+                    style={{ backgroundImage: `url(${Bhumik})`, opacity: 0.8 }}
                   >
                     <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
                       Click to Flip
@@ -484,6 +607,47 @@ const About = () => {
               <div>
                 <h1 className="text-white text-center text-2xl">
                   Bhumik Kumar
+                </h1>
+              </div>
+            </div>
+
+            {/* Member - 2 */}
+            <div className="flex flex-col gap-8" data-aos="fade-left">
+              <div
+                className={`card flip-card h-[20rem] w-[20rem] hover:scale-105 transition-all duration-700 ${
+                  isFlipped2 ? "flipped" : ""
+                }`}
+                onClick={() => setIsFlipped2(!isFlipped2)}
+              >
+                <div className="flip-card-inner w-[100%] h-[100%]">
+                  <div
+                    className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    style={{
+                      backgroundImage: `url(${Priyanshu})`,
+                      opacity: 0.8,
+                    }}
+                  >
+                    <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
+                      Click to Flip
+                    </h1>
+                  </div>
+
+                  <div
+                    className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
+                    // style={{ backgroundImage: `url(${Vite})` }}
+                  >
+                    <p className="text-center text-xl">
+                      "Priyanshu Satapathy, head of IOSC-BVP's AI/ML department,
+                      is a visionary leader fostering a collaborative community.
+                      Through projects, hackathons, and workshops, he empowers
+                      students to apply AI/ML to real-world challenges."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-white text-center text-2xl">
+                  Priyanshu Satapathy
                 </h1>
               </div>
             </div>
@@ -544,16 +708,16 @@ const TextParallaxContentExample = () => {
   return (
     <div id="AiParallax" className="pt-20 bg-[#000029]">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Collaborate"
-        heading="Let's Build Together"
+        imgUrl={ai_event2}
+        subheading="Learn"
+        heading="Regular Sessions"
       >
         <ExampleContent1 />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Quality"
-        heading="Never compromise."
+        imgUrl={ai_event1}
+        subheading="Collaborate"
+        heading="Let's Build Together"
       >
         <ExampleContent2 />
       </TextParallaxContent>
@@ -735,17 +899,24 @@ const Footer = () => {
         <div className="info-wrapper flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
             <h4 className="text-3xl fonat-semibold text-white">Contact Us</h4>
-            <h5 className="text-lg mt-0 mb-2 text-white">
-              Intellectual OneApi's Students Club
-            </h5>
+            <div className="flex sm:flex-row flex-col gap-8 mt-4">
+                <div className="flex flex-col text-white">
+                  <p>Faculty Incharge: Prof. Monica Gupta</p>
+                  <p>(email)</p>
+                </div>
+                <div className="flex flex-col text-white">
+                  <p>President: Bhumik Kumar</p>
+                  <p>(bhumikkapoo27@gmail.com)</p>
+                </div>
+              </div>
             <div className="mt-6 lg:mb-0 mb-6">
               <button
-                className=" text-lightBlue-400 font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className="text-lightBlue-400 font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <a href="">
+                <a href="https://x.com/iosc_bvcoe/status/1838946162931278156?s=46">
                   <img
-                    src={twitter}
+                    src={X}
                     alt=""
                     className="rounded-full hover:scale-125"
                   />
@@ -755,24 +926,24 @@ const Footer = () => {
                 className="text-lightBlue-600  font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <a href="">
+                <a href="https://www.instagram.com/iosc.bvcoe?igsh=bjc1dDBveXozZ3Js">
                   <img src={instagram} alt="" className="w-8 hover:scale-125" />
                 </a>
               </button>
               <button
-                className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <a href="">
-                  <img src="" alt="" />
+                <a href="mailto:iosc.bvcoe@gmail.com">
+                  <img src={Gmail} alt="" className="w-8 hover:scale-125" />
                 </a>
               </button>
               <button
-                className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <a href="">
-                  <img src="" alt="" />
+                <a href="https://www.linkedin.com/company/iosc-bvcoe/">
+                  <img src={Linkedin} alt="" className="w-8 hover:scale-125" />
                 </a>
               </button>
             </div>
@@ -789,7 +960,7 @@ const Footer = () => {
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
                       href=""
                     >
-                      One
+                      Join Community
                     </a>
                   </li>
                   <li>
@@ -797,7 +968,7 @@ const Footer = () => {
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
                       href=""
                     >
-                      Two
+                      Registration
                     </a>
                   </li>
                   <li>
@@ -805,7 +976,7 @@ const Footer = () => {
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
                       href=""
                     >
-                      Three
+                      Discord
                     </a>
                   </li>
                   <li>
@@ -818,7 +989,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="w-full lg:w-4/12 px-4">
+              {/* <div className="w-full lg:w-4/12 px-4">
                 <span className="block uppercase text-white text-sm font-semibold mb-2">
                   Other Resources
                 </span>
@@ -856,7 +1027,7 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
