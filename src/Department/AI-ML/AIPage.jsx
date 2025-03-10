@@ -1121,7 +1121,7 @@ const Footer = () => {
                   <li>
                     <a
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
-                      href="https://docs.google.com/forms/d/1u-7eLNTuSxuNtt6_zEQpsxxu5CLNhLHKiK0wCg7PmPY/edit?pli=1"
+                      href="https://forms.gle/YG2VfugSAaWRCnSE6"
                     >
                       Join Community
                     </a>
