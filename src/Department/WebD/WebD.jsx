@@ -16,9 +16,10 @@ import { useLocation } from "react-router-dom";
 // import IOSC from "../../Assets/IOSC.jpg";
 import iosc1 from "../../Assets/iosc1.jpg";
 import Project1 from "../../Assets/Project-1.png";
-import Project2 from "../../Assets/Project-2.png";
-import Project3 from "../../Assets/Project-3.png";
-import Project4 from "../../Assets/Project-4.png";
+import Project2 from "../../Assets/Project-2.jpg";
+import Project3 from "../../Assets/Project-3.jpg";
+import Project4 from "../../Assets/Project-4.jpg";
+import WebD_event from "../../Assets/WebD_event.png";
 import "../../index.css";
 import Aditya from "../../Assets/team_images/Aditya.png";
 import Kashaan from "../../Assets/team_images/Kashaan_WebD.jpg";
@@ -308,27 +309,27 @@ const HoverImageLinks = () => {
         <Link
           heading="Project-1"
           subheading="Learn what we do here"
-          imgSrc={Project1}
-          href="#"
+          imgSrc={Project2}
+          href="https://github.com/Suraj-22-12/WinterHack_Project"
         />
         <Link
           heading="Project-2"
           subheading="We work with great people"
-          imgSrc={Project2}
+          imgSrc={Project3}
           href="#"
         />
         <Link
           heading="Project-3"
           subheading="Our work speaks for itself"
-          imgSrc={Project3}
-          href="#"
+          imgSrc={Project4}
+          href="https://github.com/Angelgupta13/project"
         />
-        <Link
+        {/* <Link
           heading="Project-4"
           subheading="We want cool people"
           imgSrc={Project4}
           href="#"
-        />
+        /> */}
         {/* <Link
           heading="Project-5"
           subheading="Incase you're bored"
@@ -463,7 +464,7 @@ const TextParallaxContentExample = () => {
   return (
     <div className="bg-zinc-950">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={WebD_event}
         subheading="Collaborate"
         heading="Let's Build Together"
       >

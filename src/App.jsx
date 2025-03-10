@@ -30,7 +30,7 @@ const App = () => {
 
       <footer
         id="Footer"
-        className="relative h-full w-full pt-[4rem] content-center bg-[#000029] pt-8 pb-6 transition delay-500"
+        className="relative h-full w-full pt-[4rem] content-center bg-[#000029]  pb-6 transition delay-500"
       >
         <div className="container mx-auto px-4" data-aos="fade-up">
           <div className="info-wrapper flex flex-wrap text-left lg:text-left">
@@ -38,8 +38,8 @@ const App = () => {
               <h4 className="text-3xl fonat-semibold text-white">Contact Us</h4>
               <div className="flex sm:flex-row flex-col gap-8 mt-4">
                 <div className="flex flex-col text-white">
-                  <p>Faculty Incharge: Prof. Monica Gupta</p>
-                  <p>(email)</p>
+                  <p>Faculty Incharge: Dr. Monica Gupta</p>
+                  <p>(monica.gupta.me@gmail.com)</p>
                 </div>
                 <div className="flex flex-col text-white">
                   <p>President: Bhumik Kumar</p>
@@ -103,7 +103,7 @@ const App = () => {
                     <li>
                       <a
                         className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
-                        href=""
+                        href="https://docs.google.com/forms/d/1u-7eLNTuSxuNtt6_zEQpsxxu5CLNhLHKiK0wCg7PmPY/edit?pli=1"
                       >
                         Join Community
                       </a>
@@ -111,12 +111,12 @@ const App = () => {
                     <li>
                       <a
                         className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
-                        href=""
+                        href="https://docs.google.com/forms/d/1u-7eLNTuSxuNtt6_zEQpsxxu5CLNhLHKiK0wCg7PmPY/edit?pli=1"
                       >
                         Registration
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
                         href=""
@@ -131,7 +131,7 @@ const App = () => {
                       >
                         Four
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 {/* <div className="w-full lg:w-4/12 px-4">

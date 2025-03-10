@@ -5,13 +5,14 @@ import Gmail from "../../Assets/Gmail.svg";
 import instagram from "../../Assets/instagram.png";
 import Linkedin from "../../Assets/linkedin.png";
 import Iosclogo from "../../Assets/website background.png";
-import videoSrc from "../../Assets/Ai_BACKGROUND(2).mp4";
+import videoSrc from "../../Assets/Ai_BACKGROUND.mp4";
+import videoSrc_mobile from "../../Assets/Ai_Background_mobile.mp4";
 import ai_event1 from "../../Assets/AI_Workshop.jpg";
 import ai_event2 from "../../Assets/intel_speaker_session.jpg";
-import Ai_project1 from "../../Assets/Ai_project1.jpg";
-import Ai_project2 from "../../Assets/Ai_project2.jpg";
-import Ai_project3 from "../../Assets/Ai_project3.png";
-import Ai_project4 from "../../Assets/Ai_project4.png";
+import Project1 from "../../Assets/Project1.mp4";
+import Project2 from "../../Assets/Project2.mp4";
+import Project3 from "../../Assets/Project3.mp4";
+import Project4 from "../../Assets/Project4.mp4";
 import Bhumik from "../../Assets/team_images/Bhumik.jpg";
 import Priyanshu from "../../Assets/team_images/Priyanshu_Ai.jpg";
 import "../../index.css";
@@ -220,11 +221,24 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize); // Listen for window resize
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
+  }, []);
+
   return (
     <>
-      <div className="sm:h-screen h-[25rem] w-full bg-[#000029] relative overflow-hidden flex flex-col">
-        <video
-          className="absolute top-[2.5rem] sm:top-0 left-0 w-full h-full sm:object-cover sm:object-center z-[0]"
+      <div className="sm:h-screen h-[20rem] w-full bg-[#000029] relative overflow-hidden flex flex-col">
+        {/* <video
+          className="absolute sm:top-[4.2rem] left-0 w-full h-full sm:object-cover sm:object-center z-[0]"
           src={videoSrc}
           autoPlay
           loop
@@ -233,7 +247,33 @@ const Home = () => {
             transform: `translateY(${scrollY * 0.5}px)`, // Adjust the parallax effect speed
             willChange: "transform", // Optimize for better performance
           }}
-        />
+        /> */}
+
+        {isMobile ? (
+          <video
+            className="absolute sm:top-[4.2rem] top-[2rem]  w-full h-full object-contain object-center z-[0]"
+            src={videoSrc}
+            autoPlay
+            loop
+            muted
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`,
+              willChange: "transform",
+            }}
+          />
+        ) : (
+          <video
+            className="absolute sm:top-[4.2rem] left-0 w-full h-full object-cover object-center z-[0]"
+            src={videoSrc}
+            autoPlay
+            loop
+            muted
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`,
+              willChange: "transform",
+            }}
+          />
+        )}
 
         <div className="relative  backdrop-blur-md bg-[#000029]  h-[5rem]">
           <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
@@ -459,38 +499,161 @@ const Projects = () => {
 
 // BouncingCards Starts--------------------------------
 
+// const BouncyCardsFeatures = () => {
+//   return (
+//     <section className="mx-auto  w-full h-full px-4 py-6 text-slate-800">
+//       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
+//         <h2 className="max-w-lg font-bold md:text-4xl text-slate-400">
+//           Our Projects
+//         </h2>
+//       </div>
+//       <div
+//         className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4"
+//         data-aos="fade-down"
+//       >
+//         <BounceCardLeft className="col-span-12 md:col-span-4">
+//           <img src={Ai_project1} alt="" />
+//           <CardTitle className="z-10">AI Gym Trainer</CardTitle>
+//         </BounceCardLeft>
+//         <BounceCardRight className="col-span-12 md:col-span-8 overflow-x-hidden">
+//           <img src={Ai_project3} alt="" />
+//           <CardTitle>Eye Mouse</CardTitle>
+//         </BounceCardRight>
+//       </div>
+//       <div
+//         className="grid grid-cols-1 md:grid-cols-12 gap-4"
+//         data-aos="fade-up"
+//       >
+//         <BounceCardLeft className="col-span-12 md:col-span-8">
+//           <img src={Ai_project4} alt="" />
+//           <CardTitle>Auism Predictor</CardTitle>
+//         </BounceCardLeft>
+//         <BounceCardRight className="col-span-12 md:col-span-4 overflow-x-hidden">
+//           <img src={Ai_project2} alt="" />
+//           <CardTitle>Kreative AI Banner</CardTitle>
+//         </BounceCardRight>
+//       </div>
+//     </section>
+//   );
+// };
+
 const BouncyCardsFeatures = () => {
   return (
-    <section className="mx-auto  w-full h-full px-4 py-6 text-slate-800">
+    <section className="mx-auto w-full h-full px-4 py-6 text-slate-800">
+      {/* Header Section */}
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
-        <h2 className="max-w-lg font-bold md:text-4xl text-slate-400">
+        <h2 className="max-w-lg font-bold md:text-4xl text-3xl text-slate-400">
           Our Projects
         </h2>
       </div>
+
+      {/* Cards Grid */}
       <div
         className="mb-4 grid grid-cols-1 md:grid-cols-12 gap-4"
         data-aos="fade-down"
       >
-        <BounceCardLeft className="col-span-12 md:col-span-4">
-          <img src={Ai_project1} alt="" />
-          <CardTitle className="z-10">AI Gym Trainer</CardTitle>
+        <BounceCardLeft className="col-span-12 md:col-span-4 !p-0">
+          {" "}
+          {/* Remove padding */}
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <a href="https://github.com/kbhumik27/Repsy--AI-GYM-TRAINER">
+              <video
+                src={Project1}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30 "></div>
+              <CardTitle>
+                <a
+                  href="https://github.com/kbhumik27/Repsy--AI-GYM-TRAINER"
+                  className="text-white pl-4"
+                >
+                  AI Gym Trainer
+                </a>
+              </CardTitle>
+            </a>
+          </div>
         </BounceCardLeft>
-        <BounceCardRight className="col-span-12 md:col-span-8 overflow-x-hidden">
-          <img src={Ai_project3} alt="" />
-          <CardTitle>Eye Mouse</CardTitle>
+
+        <BounceCardRight className="col-span-12 md:col-span-8 !p-0">
+          {/* Remove padding */}
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <a href="https://github.com/Rudryy/EYE-MOUSE">
+              <video
+                src={Project2}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <CardTitle>
+                <a
+                  href="https://github.com/Rudryy/EYE-MOUSE"
+                  className="text-white pl-4"
+                >
+                  Eye Mouse
+                </a>
+              </CardTitle>
+            </a>
+          </div>
         </BounceCardRight>
       </div>
+
       <div
         className="grid grid-cols-1 md:grid-cols-12 gap-4"
         data-aos="fade-up"
       >
-        <BounceCardLeft className="col-span-12 md:col-span-8">
-          <img src={Ai_project4} alt="" />
-          <CardTitle>Auism Predictor</CardTitle>
+        <BounceCardLeft className="col-span-12 md:col-span-8 !p-0">
+          {" "}
+          {/* Remove padding */}
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <a href="https://github.com/Akshita-2006/ASDPrognosis">
+              <video
+                src={Project3}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <CardTitle>
+                <a
+                  href="https://github.com/Akshita-2006/ASDPrognosis"
+                  className="text-white pl-4"
+                >
+                  Autism Predictor
+                </a>
+              </CardTitle>
+            </a>
+          </div>
         </BounceCardLeft>
-        <BounceCardRight className="col-span-12 md:col-span-4 overflow-x-hidden">
-          <img src={Ai_project2} alt="" />
-          <CardTitle>Kreative AI Banner</CardTitle>
+
+        <BounceCardRight className="col-span-12 md:col-span-4 !p-0">
+          {" "}
+          {/* Remove padding */}
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <a href="https://github.com/ashuna-dev/Kreative-AI">
+              <video
+                src={Project4}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <CardTitle>
+                <a
+                  href="https://github.com/ashuna-dev/Kreative-AI"
+                  className="text-white pl-4"
+                >
+                  Kreative AI Banner
+                </a>
+              </CardTitle>
+            </a>
+          </div>
         </BounceCardRight>
       </div>
     </section>
@@ -595,7 +758,7 @@ const About = () => {
                     // style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <p className="text-center text-xl">
-                      "Bhumik, head of IOSC-BVP's AI/ML department, inspires
+                      "Bhumik, President of IOSC-BVP, inspires
                       students through hands-on workshops and hackathons. He
                       fosters ethical AI practices, multidisciplinary
                       applications, and a collaborative environment, building a
@@ -606,7 +769,7 @@ const About = () => {
               </div>
               <div>
                 <h1 className="text-white text-center text-2xl">
-                  Bhumik Kumar
+                  Bhumik kumar kapoor
                 </h1>
               </div>
             </div>
@@ -900,15 +1063,15 @@ const Footer = () => {
           <div className="w-full lg:w-6/12 px-4">
             <h4 className="text-3xl fonat-semibold text-white">Contact Us</h4>
             <div className="flex sm:flex-row flex-col gap-8 mt-4">
-                <div className="flex flex-col text-white">
-                  <p>Faculty Incharge: Prof. Monica Gupta</p>
-                  <p>(email)</p>
-                </div>
-                <div className="flex flex-col text-white">
-                  <p>President: Bhumik Kumar</p>
-                  <p>(bhumikkapoo27@gmail.com)</p>
-                </div>
+              <div className="flex flex-col text-white">
+                <p>Faculty Incharge: Dr . Monica Gupta</p>
+                <p>(monica.gupta.me@gmail.com)</p>
               </div>
+              <div className="flex flex-col text-white">
+                <p>President: Bhumik Kumar Kapoor</p>
+                <p>(bhumikkapoo27@gmail.com)</p>
+              </div>
+            </div>
             <div className="mt-6 lg:mb-0 mb-6">
               <button
                 className="text-lightBlue-400 font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
@@ -958,7 +1121,7 @@ const Footer = () => {
                   <li>
                     <a
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
-                      href=""
+                      href="https://docs.google.com/forms/d/1u-7eLNTuSxuNtt6_zEQpsxxu5CLNhLHKiK0wCg7PmPY/edit?pli=1"
                     >
                       Join Community
                     </a>
@@ -966,12 +1129,12 @@ const Footer = () => {
                   <li>
                     <a
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
-                      href=""
+                      href="https://docs.google.com/forms/d/1u-7eLNTuSxuNtt6_zEQpsxxu5CLNhLHKiK0wCg7PmPY/edit?pli=1"
                     >
                       Registration
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       className="text-white hover:text-blue-400 font-semibold block pb-2 text-sm"
                       href=""
@@ -986,7 +1149,7 @@ const Footer = () => {
                     >
                       Four
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/* <div className="w-full lg:w-4/12 px-4">

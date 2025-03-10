@@ -22,40 +22,40 @@ const MovingText = () => {
                 <div className="w-full flex flex-col items-center justify-center">
                     <div className={className + "__container w-full py-2 pb-4 overflow-hidden border-blue-900 border-t-4 border-b-4"}>
                         <div className={className + "__movingTexts"}>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
                         </div>
                         <div className={className + "__movingTexts"}>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
                         </div>
                         <div className={className + "__movingTexts"}>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
-                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48">Join Us.</h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
+                            <h1 className="text-blue-900 text-3xl w-max text-left mx-48"><a href="https://chat.whatsapp.com/IzoYNN2fsz35PnzxAzywMU">Join Us.</a></h1>
                         </div>
                     </div>
                 </div>

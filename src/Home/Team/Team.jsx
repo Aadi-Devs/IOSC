@@ -17,6 +17,7 @@ import Rudra from "../../Assets/team_images/Rudra.png";
 import Utkarsh from "../../Assets/team_images/Utkarsh.jpg";
 import Priyanshu from "../../Assets/team_images/Priyanshu.jpg";
 import Vishal from "../../Assets/team_images/Vishal.png";
+import Sayan from "../../Assets/team_images/Sayan.jpg";
 import faculty_incharge from "../../Assets/team_images/faculty_incharge.jpg";
 // import instagram from "../../Assets/instagram.png";
 
@@ -117,11 +118,11 @@ const Nav = () => {
                 <img
                   class="mx-auto w-72 h-72 rounded-full object-cover object-center scale-100"
                   src={faculty_incharge}
-                  alt="Prof. Monica Gupta"
+                  alt="Dr. Monica Gupta"
                 />
               </div>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Prof. Monica Gupta</a>
+                <a href="#">Dr. Monica Gupta</a>
               </h3>
               <p>Faculty Incharge</p>
               {/* <ul class="flex justify-center mt-4 space-x-4">
@@ -201,7 +202,7 @@ const Nav = () => {
                 <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Vishal Gupta</a>
                 </h3>
-                <p>Student Coordinator</p>
+                <p>Student Mentor</p>
                 {/* <ul class="flex justify-center mt-4 space-x-4">
                   <li>
                     <a
@@ -282,14 +283,14 @@ const Nav = () => {
                 <div className="mx-auto mb-4 rounded-full w-60 h-60 overflow-hidden">
                   <img
                     class="mx-auto w-60 h-60 rounded-full object-cover object-center scale-150"
-                    src=""
+                    src={Sayan}
                     alt="Sayan Halder"
                   />
                 </div>
                 <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Sayan Halder</a>
                 </h3>
-                <p>Student Coordinator</p>
+                <p>Student Mentor</p>
                 {/* <ul class="flex justify-center mt-4 space-x-4">
                   <li>
                     <a
@@ -1367,11 +1368,11 @@ const Heads = () => {
                 <img
                   class="mx-auto w-40 h-40 rounded-full object-cover object-center"
                   src={Rudra}
-                  alt="Nikhil Kaushal"
+                  alt="Rudra Oberoi"
                 />
               </div>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Rudra Oberio</a>
+                <a href="#">Rudra Oberoi</a>
               </h3>
               <p>Operations Head</p>
               {/* <ul class="flex justify-center mt-4 space-x-4">

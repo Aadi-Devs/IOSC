@@ -12,6 +12,8 @@ import IdeateFront from "../../Assets/IdeateFront.jpg";
 import IdeateBack  from "../../Assets/IdeateBack.jpg";
 import ai_event_front from "../../Assets/AI_Workshop_home.jpg";
 import ai_event_back from "../../Assets/AI_ws_home_card_bg.jpg";
+import WebD_front from "../../Assets/WebD_front.jpg";
+import WebD_back from "../../Assets/WebD_back.png";
 
 const Cards = () => {
   // Card States
@@ -242,7 +244,7 @@ const Cards = () => {
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
                     className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    style={{ backgroundImage: `url(${WebD_front})`}}
                     // style={{ backgroundColor: `cornflowerblue` }}
                   >
                     <h1 className="flip-card-h1 text-center text-2xl font-bold/ mt-[1.2rem]">
@@ -258,7 +260,7 @@ const Cards = () => {
 
                   <div
                     className="flip-card-back flex items-center justify-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Vite})` }}
+                    style={{ backgroundImage: `url(${WebD_back})` }}
                   >
                     <p className="text-xl text-center">
                       "Engaging sessions covering essential web dev skills.

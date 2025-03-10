@@ -89,7 +89,7 @@ const Home = () => {
 
         {isMobile ? (
           <img
-            className="absolute top-[4rem] left-0 w-full h-full object-cover object-center z-[-1]"
+            className="absolute top-[1.5rem] left-0 w-full h-full object-cover object-center z-[-1]"
             src={HomeBackgroundMobile}
             alt="Background"
           />
