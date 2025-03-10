@@ -5,7 +5,7 @@ import Gmail from "../../Assets/Gmail.svg";
 import instagram from "../../Assets/instagram.png";
 import Linkedin from "../../Assets/linkedin.png";
 import Iosclogo from "../../Assets/website background.png";
-// import videoSrc from "../../Assets/AI_background.mp4";
+import videoSrc from "../../Assets/AI_background.mp4";
 // import videoSrc_mobile from "../../Assets/Ai_Background_mobile.mp4";
 import ai_event1 from "../../Assets/AI_Workshop.jpg";
 import ai_event2 from "../../Assets/intel_speaker_session.jpg";
@@ -252,7 +252,7 @@ const Home = () => {
         {isMobile ? (
           <video
             className="absolute sm:top-[4.2rem] top-[2rem]  w-full h-full object-contain object-center z-[0]"
-            src={Project2}
+            src={videoSrc}
             autoPlay
             loop
             muted
@@ -264,7 +264,7 @@ const Home = () => {
         ) : (
           <video
             className="absolute sm:top-[4.2rem] left-0 w-full h-full object-cover object-center z-[0]"
-            src={Project2}
+            src={videoSrc}
             autoPlay
             loop
             muted
