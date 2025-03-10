@@ -42,7 +42,7 @@ const App = () => {
                   <p>(monica.gupta.me@gmail.com)</p>
                 </div>
                 <div className="flex flex-col text-white">
-                  <p>President: Bhumik Kumar</p>
+                  <p>President: Bhumik Kumar Kapoor</p>
                   <p>(bhumikkapoo27@gmail.com)</p>
                 </div>
               </div>
