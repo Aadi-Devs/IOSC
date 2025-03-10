@@ -33,11 +33,13 @@ const Example = () => {
         <h1>Our Departments</h1>
       </div>
       <div className="department-wrapper flex w-full gap-[10rem]">
-        <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="0">
+        <div className="flex flex-col justify-center gap-6" data-aos="fade-up" data-aos-delay="0">
           <TiltCard imageSrc={AIML} route="/AI/ML" />
+          <h1 className="text-white text-center text-2xl">AI/ML</h1>
         </div>
-        <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
+        <div className="flex flex-col justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
           <TiltCard imageSrc={WebD} route="/WebD" />
+          <h1 className="text-white text-center text-2xl">WebD</h1>
         </div>
         {/* <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="400">
           <TiltCard imageSrc={IOT} route="/IOT" />
