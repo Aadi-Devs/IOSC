@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 // import "../../Home/index.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Iosclogo from "../../Assets/website background.png";
 // import videoSrc from "../../Assets/Nature.mp4";
-import AIML from "../../Assets/AI-ML.jpg";
+// import AIML from "../../Assets/AI-ML.jpg";
 import Aditya from "../../Assets/team_images/Aditya.png";
 import Abuzar from "../../Assets/team_images/Abuzar.jpg";
 import Bhumik from "../../Assets/team_images/Bhumik.jpg";

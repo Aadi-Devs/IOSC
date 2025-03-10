@@ -316,7 +316,7 @@ const HoverImageLinks = () => {
           heading="Project-2"
           subheading="We work with great people"
           imgSrc={Project3}
-          href="#"
+          href="https://github.com/shreshthagarwal/travora"
         />
         <Link
           heading="Project-3"
