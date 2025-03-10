@@ -84,7 +84,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="h-full w-full relative dark:bg-gray-900 overflow-hidden">
+      <div className="h-full w-full relative bg-[#000029] overflow-hidden">
         <div className="relative bg-opacity-40 backdrop-blur-md bg-transparent h-[5rem] z-[10]">
           <header className="navbar-smooth flex items-center justify-between bg-opacity-5 text-white">
             <div className="container mx-auto flex items-center h-20">
@@ -104,7 +104,7 @@ const Nav = () => {
           </header>
         </div>
 
-        <div className="flex flex-col sm:h-[40rem] h-full w-full justify-center dark:bg-gray-900 sm:gap-0 gap-20">
+        <div className="flex flex-col sm:h-[40rem] h-full w-full justify-center bg-[#000029] sm:gap-0 gap-20">
           <div className="mt-5 flex flex-col items-center justify-center gap-4">
             <h1 className="text-5xl text-white flex-col font-bold text-center">
               Our Team(2025)
@@ -377,7 +377,7 @@ const Nav = () => {
 const Prez = () => {
   return (
     <>
-      <section class="bg-white dark:bg-gray-900">
+      <section class=" bg-[#000029]">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-8 lg:px-6">
           <div class="mx-auto mb-8 max-w-screen-sm lg:mb-12">
             <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -659,7 +659,7 @@ const Prez = () => {
 const Heads = () => {
   return (
     <>
-      <section class="bg-white dark:bg-gray-900">
+      <section class=" bg-[#000029]">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-8 lg:px-6">
           <div class="mx-auto mb-12 max-w-screen-sm lg:mb-16">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
