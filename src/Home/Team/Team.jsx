@@ -16,7 +16,7 @@ import Nikhil_Kaushal from "../../Assets/team_images/Nikhil_Kaushal.jpg";
 import Rudra from "../../Assets/team_images/Rudra.png";
 import Utkarsh from "../../Assets/team_images/Utkarsh.jpg";
 import Priyanshu from "../../Assets/team_images/Priyanshu.jpg";
-import Vishal from "../../Assets/team_images/Vishal.png";
+import Vishal from "../../Assets/team_images/Vishal.jpg";
 import Sayan from "../../Assets/team_images/Sayan.jpg";
 import faculty_incharge from "../../Assets/team_images/faculty_incharge.jpg";
 // import instagram from "../../Assets/instagram.png";
