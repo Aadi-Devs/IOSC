@@ -252,7 +252,7 @@ const Home = () => {
         {isMobile ? (
           <video
             className="absolute sm:top-[4.2rem] top-[2rem]  w-full h-full object-contain object-center z-[0]"
-            src={videoSrc}
+            src={Project2}
             autoPlay
             loop
             muted
@@ -264,7 +264,7 @@ const Home = () => {
         ) : (
           <video
             className="absolute sm:top-[4.2rem] left-0 w-full h-full object-cover object-center z-[0]"
-            src={videoSrc}
+            src={Project2}
             autoPlay
             loop
             muted
