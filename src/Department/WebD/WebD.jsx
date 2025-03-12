@@ -726,11 +726,11 @@ const About = () => {
                     // style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <p className="text-center text-xl">
-                      "Kashaan, as the WebD Head of IOSC-BVP, leads
-                      innovative digital initiatives, ensuring a seamless online
-                      presence. He specializes in crafting dynamic web
-                      solutions, fostering collaboration, and enhancing the
-                      society's tech-driven outreach and engagement."
+                      "Kashaan Ahmad, Web Development Head at IOSC-BVP, leads
+                      workshops demystifying web technologies, mentors students
+                      to build technical skills and confidence, and fosters
+                      teamwork through hands-on projects, empowering them to
+                      thrive in collaborative environments."
                     </p>
                   </div>
                 </div>
