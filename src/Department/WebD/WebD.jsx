@@ -34,7 +34,6 @@ const WebD = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
   useEffect(() => {
     AOS.init({
       duration: 1000, // duration of the animation
@@ -42,9 +41,6 @@ const WebD = () => {
       once: false, // animation occurs only once
     });
   }, []);
-
-
-  
 
   return (
     <>
@@ -69,9 +65,18 @@ const WebD = () => {
       <div className="h-full w-full bg-zinc-950 ">
         <section className="grid h-full w-full text-2xl gap-2 bg-zinc-950 px-4 py-12 text-white">
           <FlipLink href="mailto:iosc.bvcoe@gmail.com">Gmail</FlipLink>
-          <FlipLink href="https://x.com/iosc_bvcoe/status/1838946162931278156?s=46" className="w-[8rem]" >Twitter</FlipLink>
-          <FlipLink href="https://www.linkedin.com/company/iosc-bvcoe/">Linkedin</FlipLink>
-          <FlipLink href="https://www.instagram.com/iosc.bvcoe?igsh=bjc1dDBveXozZ3Js">Instagram</FlipLink>
+          <FlipLink
+            href="https://x.com/iosc_bvcoe/status/1838946162931278156?s=46"
+            className="w-[8rem]"
+          >
+            Twitter
+          </FlipLink>
+          <FlipLink href="https://www.linkedin.com/company/iosc-bvcoe/">
+            Linkedin
+          </FlipLink>
+          <FlipLink href="https://www.instagram.com/iosc.bvcoe?igsh=bjc1dDBveXozZ3Js">
+            Instagram
+          </FlipLink>
         </section>
       </div>
     </>
@@ -79,10 +84,6 @@ const WebD = () => {
 };
 
 export default WebD;
-
-
-
-
 
 const Nav = () => {
   return (
@@ -218,12 +219,6 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
   );
 };
 
-
-
-
-
-
-
 // Footer Links Start
 
 const DURATION = 0.25;
@@ -293,18 +288,11 @@ const FlipLink = ({ children, href }) => {
 
 // Footer Links End
 
-
-
-
-
-
-
-
 // Project Starts
 
 const HoverImageLinks = () => {
   return (
-    <section id="Projects" className=" bg-zinc-950 h-[60rem] md:p-20" >
+    <section id="Projects" className=" bg-zinc-950 h-[60rem] md:p-20">
       <div className="mx-auto max-w-5xl">
         <Link
           heading="Project-1"
@@ -378,7 +366,6 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       whileHover="whileHover"
       className="group relative flex  items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
       data-aos="fade-up"
-
     >
       <div>
         <motion.span
@@ -450,13 +437,6 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 };
 
 // Project Ends
-
-
-
-
-
-
-
 
 // TEXTPARALLAX STARTS
 
@@ -581,14 +561,19 @@ const OverlayCopy = ({ subheading, heading }) => {
 const ExampleContent1 = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 ">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-white">
-    IOSC-BVP WebD Workshop
+      IOSC-BVP WebD Workshop
     </h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl md:text-2xl text-zinc-500">
-      The IOSC-BVP WebD department conducted a multi-day web development workshop. Day 1 covered HTML for structuring web pages, Day 2 introduced CSS for styling, and Day 3 focused on JavaScript for interactivity. Students also learned GitHub version control and live project hosting. 
+        The IOSC-BVP WebD department conducted a multi-day web development
+        workshop. Day 1 covered HTML for structuring web pages, Day 2 introduced
+        CSS for styling, and Day 3 focused on JavaScript for interactivity.
+        Students also learned GitHub version control and live project hosting.
       </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-      This hands-on experience provided a strong foundation in modern web development, equipping participants with the skills to build responsive and dynamic websites efficiently.
+        This hands-on experience provided a strong foundation in modern web
+        development, equipping participants with the skills to build responsive
+        and dynamic websites efficiently.
       </p>
     </div>
   </div>
@@ -637,10 +622,6 @@ const ExampleContent3 = () => (
 // Content Ends
 
 // TEXTPARALLAX ENDS
-
-
-
-
 
 const About = () => {
   const [isFlipped1, setIsFlipped1] = useState(false);
@@ -702,7 +683,11 @@ const About = () => {
                     // style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <p className="text-center text-xl">
-                      "Aditya Shrivastav, WebD Head of IOSC-BVP, leads web development initiatives, organizes workshops, mentors students, and enhances the society’s digital presence, equipping aspiring developers with skills to build modern, responsive, and interactive websites."
+                      "Aditya Shrivastav, WebD Head of IOSC-BVP, leads web
+                      development initiatives, organizes workshops, mentors
+                      students, and enhances the society’s digital presence,
+                      equipping aspiring developers with skills to build modern,
+                      responsive, and interactive websites."
                     </p>
                   </div>
                 </div>
@@ -725,7 +710,11 @@ const About = () => {
                 <div className="flip-card-inner w-[100%] h-[100%]">
                   <div
                     className="flip-card-front flex items-center flex-col gap-[5.5rem] w-[100%] h-[100%] bg-cover border-[1px] text-white p-4 rounded-2xl cursor-pointer"
-                    style={{ backgroundImage: `url(${Kashaan})`, objectPosition: "center", objectFit: "cover" }}
+                    style={{
+                      backgroundImage: `url(${Kashaan})`,
+                      objectPosition: "center",
+                      objectFit: "cover",
+                    }}
                   >
                     <h1 className="absolute bottom-0 flip-card-h1 text-2xl font-bold/ my-[1.5rem]">
                       Click to Flip
@@ -737,19 +726,17 @@ const About = () => {
                     // style={{ backgroundImage: `url(${Vite})` }}
                   >
                     <p className="text-center text-xl">
-                      "Bhumik, head of IOSC-BVP's AI/ML department, inspires
-                      students through hands-on workshops and hackathons. He
-                      fosters ethical AI practices, multidisciplinary
-                      applications, and a collaborative environment, building a
-                      skilled, socially aware community."
+                      "Kashaan, as the WebD Head of IOSC-BVP, leads
+                      innovative digital initiatives, ensuring a seamless online
+                      presence. He specializes in crafting dynamic web
+                      solutions, fostering collaboration, and enhancing the
+                      society's tech-driven outreach and engagement."
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h1 className="text-white text-center text-2xl">
-                  Kashaan
-                </h1>
+                <h1 className="text-white text-center text-2xl">Kashaan</h1>
               </div>
             </div>
           </div>
