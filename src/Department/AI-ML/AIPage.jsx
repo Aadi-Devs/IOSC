@@ -1201,7 +1201,7 @@ const Footer = () => {
               Developed By
               <a
                 href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
-                className="text-white hover:text-blue-600"
+                className="text-white hover:text-blue-600 underline"
                 target="_blank"
               >
                 {" "}
