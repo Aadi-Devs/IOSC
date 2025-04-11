@@ -159,7 +159,7 @@ const Home = () => {
                     <span>Team</span>
                   </Link>
                   <Link onClick={() => scrollToElement("Footer", 1800)}>
-                    <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-full border-2 border-indigo-300 transition-colors duration-700 hover:text-white hover:bg-[#000029]  hover:border-black">
+                    <button className="absolute right-3 top-5 bg-transparent text-white h-10 w-32 rounded-xl border-2 border-indigo-300 transition-colors duration-700 hover:text-[#000029] hover:bg-white  hover:border-black">
                       Contact Us
                     </button>
                   </Link>
@@ -192,7 +192,7 @@ const Home = () => {
                     Team
                   </Link>
                   <Link onClick={() => scrollToElement("Footer", 1800)} >
-                    <button className="bg-transparent text-blue-200 h-10 w-32 rounded-full border-2 border-blue-300 transition-colors duration-700 hover:text-white hover:bg-blue-400 hover:border-black mt-6">
+                    <button className="bg-transparent text-white text-xl h-10 w-32 rounded-xl border-2 border-indigo-300 transition-colors duration-700 hover:text-[#000029] hover:bg-white hover:border-black mt-6">
                       Contact Us
                     </button>
                   </Link>
